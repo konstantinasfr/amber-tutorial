@@ -114,17 +114,24 @@ quit
 
 ### 🔷 Structure Loading and Preparation
 
-#### ✅ `abc = loadpdb protein1.pdb`
-Loads the protein PDB file.
-- Missing hydrogens will be added based on force field.
+### ✅ `abc = loadpdb protein1.pdb`
 
-#### ✅ `savepdb abc first_with_hydrogens.pdb`
-Saves the updated structure with hydrogens.
-- Useful for visualization or reloading.
+- **What it does**: Loads your input protein structure (`protein1.pdb`) into a variable called `abc`.
+- **Purpose**: TLeap reads the atomic coordinates so it can begin building your system.
+- **Hydrogens**: If hydrogens are missing (as is often the case in experimental structures), TLeap **automatically adds them** based on the loaded force field and assumed protonation states.
+- **Note**: These additions are based on **standard pH (~7.0)**, unless specified otherwise.
 
-#### ✅ `mol = loadpdb first_with_hydrogens.pdb`
-Reloads the hydrogen-complete structure.
-- Ensures future edits apply to the correct version.
+### ✅ `savepdb abc first_with_hydrogens.pdb`
+
+- **What it does**: Saves the `abc` structure (now with added hydrogens) to a new file.
+- **Purpose**: Allows you to check and confirm that hydrogens were added correctly.
+- **Why it's useful**: You can open this file in PyMOL, Chimera, or VMD to **visually inspect** the modified structure before proceeding.
+
+### ✅ `mol = loadpdb first_with_hydrogens.pdb`
+
+- **What it does**: Reloads the saved structure (with hydrogens) into a new variable `mol`.
+- **Purpose**: Creates a fresh working copy of the updated structure for the next steps (e.g., adding bonds, solvating).
+- **Why it's done**: Reloading ensures you're always working with a **complete and updated version** of the molecule, including hydrogens and any other early modifications.
 
 ---
 
