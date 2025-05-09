@@ -138,41 +138,76 @@ quit
 ### 🔷 Manual Bond Definitions
 
 #### ✅ `bond mol.80.SG mol.112.SG` *(and others)*
-Forms disulfide bridges between CYS residues.
-- Prevents protein misfolding or instability.
-- Needed if your PDB doesn’t define disulfide bonds.
 
+- **What it does**: Manually defines a covalent bond between the SG (sulfur) atoms of two cysteine residues.
+- **Purpose**: This creates a **disulfide bridge (–S–S–)**, a covalent link that stabilizes protein structure.
+- **Why it’s needed**:
+  - AMBER **does not automatically guess disulfide bonds** based on distance — so you must add them yourself if missing.
+- **Residue types**: When a disulfide bond is defined, **TLeap automatically treats the cysteines as `CYX`** (modified CYS residues with one hydrogen removed from the SG atom).
+- **When you skip this step**:
+  - Proteins with structural disulfides might **misfold** or **collapse** during simulation.
+  - Important functions may be lost if the disulfide bridge is **biologically essential** (e.g., in extracellular proteins or enzymes).
+- **How to know if a bond is needed**:
+  - Check your original PDB file for `SSBOND` lines like:
+    ```
+    SSBOND 1 CYS A   80    CYS A  112
+    ```
 ---
 
 ### 🔷 Ion Addition
 
 #### ✅ `addions mol K+ 0`  
 #### ✅ `addions mol Cl- 0`
-Adds K⁺ and Cl⁻ ions to neutralize the system.
-- `0` lets tleap calculate how many are needed.
+- **What it does**: Adds **potassium (K⁺)** and **chloride (Cl⁻)** ions to your system.
+- **Purpose**: **Neutralizes the net charge** of the system so that molecular dynamics simulations run stably.
+- **What `0` means**: By passing `0`, you tell TLeap to **automatically calculate the number of ions needed** to neutralize the system’s total charge.
+- **Why it's needed**:
+  - Simulating a charged system without neutralizing ions can result in **instabilities or artifacts**, particularly in long simulations.
+  - Many MD engines assume or require charge neutrality for proper treatment of periodic boundary conditions and electrostatics.
+- **When used together**: If your system is negatively charged, only **K⁺** will be added. If positively charged, only **Cl⁻** will be added.
 - Alternatives: specify exact numbers or use `addionsrand`.
+- Note: We add extra K⁺ ions to neutralize charge and mimic physiological conditions, while the K⁺ ions we study for movement are manually placed and tracked separately.
 
 ---
 
 ### 🔷 Solvation
 
 #### ✅ `solvatebox mol TIP3PBOX 0.1`
-Surrounds the molecule with water (TIP3P).
-- Adds a water box with 1 Å padding (usually `10.0` Å recommended).
-- Alternatives: `solvateoct` for spherical solvation.
 
+- **What it does**: Surrounds your system (`mol`) with a rectangular box of **TIP3P water molecules**.
+- **Purpose**: Ensures the protein or complex is fully immersed in solvent, which is necessary for realistic molecular dynamics.
+- **Padding**: `0.1` means 0.1 nm (or 1 Å) between the molecule and the edge of the box.  
+- **Box shape**: `TIP3PBOX` creates an orthorhombic (rectangular) box using the TIP3P water model.
+- **Alternatives**:
+  - `solvateoct`: Creates a **truncated octahedral box**, which can save computational resources for roughly spherical systems.
+- **Why it's important**:
+  - Water is needed for proteins to fold, move, and behave normally.
+  - It protects the system from edge effects when periodic boundaries are used.
+  - It allows ions and water to flow freely around the molecule, like in a real cell.
+  - 
 ---
 
 ### 🔷 Saving Outputs
 
 #### ✅ `savepdb mol with_water.pdb`
-Saves the fully solvated structure to a PDB file.
-- Useful for visual checks.
+
+- **What it does**: Saves the entire system (protein + water + ions) into a PDB file.
+- **Purpose**: Allows you to open the fully prepared structure in a visualization tool like PyMOL or Chimera.
+- **Why it's useful**: Lets you visually confirm:
+  - Water box is correctly placed
+  - Ions are distributed properly
+  - No missing atoms or overlaps
 
 #### ✅ `saveamberparm mol com.prmtop com.inpcrd`
-Creates the essential AMBER files:
-- `com.prmtop`: force field/topology
-- `com.inpcrd`: initial coordinates
+
+- **What it does**: Generates the two key files that AMBER needs to start a simulation.
+- **`com.prmtop` (topology file)**:
+  - Contains all molecular information: atom types, charges, masses, bonds, angles, and force field parameters.
+- **`com.inpcrd` (coordinate file)**:
+  - Stores the 3D coordinates of all atoms and the box dimensions after solvation and ion placement.
+- **Why it's essential**:
+  - These files are used in all simulation steps (minimization, heating, MD).
+  - Without them, AMBER cannot simulate the system.
 
 ---
 
