@@ -103,14 +103,13 @@ quit
 - **What it does**: Loads a `.prepi` library file that defines the **structure, atom types, charges, and bonding** for a **custom ligand**, such as **PIP2**.
 - **Purpose**: It tells AMBER how to **build the ligand** from scratch — because unlike proteins or water, ligands are not predefined in the standard force fields.
 - **Why it's needed**: TLeap has **no knowledge of custom ligands by default**, so this file acts as a blueprint. Without it, AMBER would not know how to assign atoms, bonds, or charges.
-> **Note**: If you have multiple ligands (e.g., PIP2, ATP, inhibitor), you’ll need to repeat this step for each one using separate `.prepi` files.
 
 #### ✅ `loadamberparams PIP.frcmod`
 
 - **What it does**: Loads a `.frcmod` file that includes **missing force field parameters** (usually for torsion angles, improper dihedrals, or van der Waals terms) that were **not automatically found** when building the ligand with GAFF2.
 - **Purpose**: Completes the force field definition for the ligand, ensuring AMBER has everything it needs to simulate the molecule accurately.
 - **Why it's needed**: GAFF2 covers a wide range of chemical space, but sometimes it **can’t assign all parameters** automatically. This file fills in those missing definitions.
-
+> **Note**: If you have multiple ligands (e.g., PIP2, ATP, inhibitor), you’ll need to repeat these last two steps for each one using separate `.prepi` and `.frcmod` files.
 ---
 
 ### 🔷 Structure Loading and Preparation
