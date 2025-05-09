@@ -4,8 +4,6 @@
 Welcome to the AMBER Molecular Dynamics Tutorial site!  
 This guide walks you step-by-step through preparing a biomolecular system for simulation using AMBER tools, from initial system setup to post-simulation analysis.
 
-Whether you're new to molecular dynamics or just looking for a clear reference, this tutorial is designed to explain everything **clearly and in context**, with purpose and alternatives for each command.
-
 ---
 
 ## 📚 Tutorial Sections
