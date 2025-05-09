@@ -209,12 +209,11 @@ quit
   - These files are used in all simulation steps (minimization, heating, MD).
   - Without them, AMBER cannot simulate the system.
 
----
 
 ### ✅ `quit`
 Ends the tleap session.
 
----
+
 
 ## 🧾 Summary
 
@@ -228,7 +227,8 @@ Ends the tleap session.
 | `solvatebox` | Add water |
 | `saveamberparm` | Output AMBER simulation files |
 
-------
+<hr style="height:3px; background-color:#444; border:none; margin:20px 0;">
+
 
 # 🧪 My Example: Preparing the GIRK2 Channel (3SYC)
 
