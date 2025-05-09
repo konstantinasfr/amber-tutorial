@@ -11,10 +11,8 @@ Whether you're new to molecular dynamics or just looking for a clear reference, 
 ## 📚 Tutorial Sections
 
 - 🧪 [System Setup with TLeap](./tleap.md)  
-  Learn how to load force fields, define ligands, add disulfide bonds, solvate your system, and generate AMBER input files.
-
-- 🧬 [GIRK2 Channel Example (3SYC)](./example-girk2.md)  
-  See how the workflow is applied to a real PDB with disulfide bonds and renumbering issues.
+  Learn how to load force fields, define ligands, add disulfide bonds, solvate your system, and generate AMBER input files.  
+  &nbsp;&nbsp;&nbsp;&nbsp;🧬 [GIRK2 Channel Example (3SYC)](./example-girk2.md) — Real-case application with disulfide bond renumbering and CYX conversion.
 
 - ⚙️ [Energy Minimization](./minimization.md) *(coming soon)*  
   Relax your system and remove any bad contacts after initial setup.
