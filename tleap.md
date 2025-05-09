@@ -1,7 +1,7 @@
 
-# 🧬 AMBER TLeap Input Script – Full Explanation
+# 🧬 AMBER TLeap Input Script
 
-This page provides a detailed explanation of each line in a typical `tleap.in` file used for preparing molecular systems for AMBER simulations. The purpose is to help new users understand **what each line does**, **why it's needed**, and **what alternatives exist**.
+This page provides a detailed explanation of each line in a typical `tleap.in` file used for preparing molecular systems for AMBER simulations.
 
 ---
 
@@ -184,7 +184,7 @@ quit
   - Water is needed for proteins to fold, move, and behave normally.
   - It protects the system from edge effects when periodic boundaries are used.
   - It allows ions and water to flow freely around the molecule, like in a real cell.
-  - 
+  
 ---
 
 ### 🔷 Saving Outputs
