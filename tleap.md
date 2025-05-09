@@ -228,4 +228,5 @@ Ends the tleap session.
 | `saveamberparm` | Output AMBER simulation files |
 
 ⬅️ [Back to Homepage](./README.md)
-➡️ Continue to Example: GIRK2 Channel (3SYC) (./girk2_3syc_example.md)
+
+➡️ [Continue to Example: GIRK2 Channel (3SYC)](./girk2_3syc_example.md)
