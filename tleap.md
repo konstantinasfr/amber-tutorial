@@ -228,9 +228,9 @@ Ends the tleap session.
 | `solvatebox` | Add water |
 | `saveamberparm` | Output AMBER simulation files |
 
----
+------
 
-## 🧪 My Example: Preparing the GIRK2 Channel (3SYC)
+# 🧪 My Example: Preparing the GIRK2 Channel (3SYC)
 
 To test this workflow, I used the structure [**3SYC**](https://www.rcsb.org/structure/3SYC), which is the **crystal structure of the G protein-gated inward rectifier K⁺ channel GIRK2 (Kir3.2), D228N mutant**. The structure contains **only the protein** (no ligands), and I wanted to simulate it using AMBER.
 
