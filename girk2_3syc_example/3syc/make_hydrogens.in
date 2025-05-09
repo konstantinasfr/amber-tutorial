@@ -1,0 +1,4 @@
+source leaprc.protein.ff19SB
+abc = loadpdb ../3syc.pdb
+savepdb abc first_with_hydrogens.pdb
+quit
