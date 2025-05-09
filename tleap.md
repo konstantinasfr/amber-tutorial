@@ -227,7 +227,7 @@ Ends the tleap session.
 | `solvatebox` | Add water |
 | `saveamberparm` | Output AMBER simulation files |
 
-<hr style="height:3px; background-color:#444; border:none; margin:20px 0;">
+<hr style="height:8px; background-color:#444; border:none; margin:20px 0;">
 
 
 # 🧪 My Example: Preparing the GIRK2 Channel (3SYC)
