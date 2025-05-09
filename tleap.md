@@ -105,8 +105,6 @@ quit
 - **Why it's needed**: TLeap has **no knowledge of custom ligands by default**, so this file acts as a blueprint. Without it, AMBER would not know how to assign atoms, bonds, or charges.
 > **Note**: If you have multiple ligands (e.g., PIP2, ATP, inhibitor), you’ll need to repeat this step for each one using separate `.prepi` files.
 
----
-
 #### ✅ `loadamberparams PIP.frcmod`
 
 - **What it does**: Loads a `.frcmod` file that includes **missing force field parameters** (usually for torsion angles, improper dihedrals, or van der Waals terms) that were **not automatically found** when building the ligand with GAFF2.
