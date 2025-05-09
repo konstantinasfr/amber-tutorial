@@ -107,4 +107,4 @@ All output files will be stored in the folder `3syc/`.
 
 ⬅️ [Back to Homepage](./README.md)
 
-⬅️ [Back to Homepage](./tleap.md)
+⬅️ [Back to TLeap Input Script](./tleap.md)
