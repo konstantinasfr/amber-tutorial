@@ -88,20 +88,41 @@ Go to [3SYC](https://www.rcsb.org/structure/3SYC), download it, and save it as:
 ```
 3syc.pdb
 ```
+### 🧪 Step 2: Run the Full Preparation Script
 
-### 🧪 Step 2: Run the full preparation script
+Once you’ve downloaded `3syc.pdb`, place it in the `girk2_3syc_example/` folder (where the `run_all.sh` script is located).  
+Then open your terminal and run:
 
 ```bash
-bash run_full_preparation.sh 3syc.pdb
+cd girk2_3syc_example/
+bash run_all.sh 3syc.pdb
 ```
 
-This will:
-- Add hydrogens
-- Fix the CYS → CYX renaming and HG deletion
-- Add ions and water
-- Generate all required AMBER input files (`.prmtop`, `.inpcrd`, solvated PDB)
+---
 
-All output files will be stored in the folder `3syc/`.
+### 🚀 What This Script Will Do
+
+This command automatically performs all the setup steps for running AMBER simulations:
+
+- ✅ **Creates a folder** named `3syc/` to keep everything organized.
+- ✅ **Adds missing hydrogens** to the protein structure using TLeap.
+- ✅ **Handles disulfide bonds** by:
+  - Renaming `CYS` residues involved in `SSBOND` links to `CYX`
+  - Deleting the `HG` atom from each `CYX` (required for disulfide bonding)
+  - Automatically creating the disulfide bonds in TLeap
+- ✅ **Adds ions** (`K⁺`, `Cl⁻`) to neutralize the system
+- ✅ **Solvates** the system in a **TIP3P water box** (10 Å buffer)
+- ✅ **Generates AMBER input files**, saved in:
+
+```
+3syc/amber_input/
+├── com.prmtop       # Topology file for AMBER
+├── com.inpcrd       # Coordinates file for AMBER
+└── with_water.pdb   # Solvated, neutralized structure (for visualization)
+```
+
+Once completed, you’ll be ready to start **energy minimization** using these AMBER-ready files.
+
 
 ---
 
