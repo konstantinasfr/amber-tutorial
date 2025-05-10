@@ -127,17 +127,13 @@ Once completed, you’ll be ready to start **energy minimization** using these A
 
 ### 📸 Visualizing the Disulfide Bond
 
-Below is a snapshot of the disulfide bridge formed between two `CYX` residues in the GIRK2 channel, as rendered in PyMOL after running the setup script:
+Below is a snapshot of the disulfide bridge formed between two `CYX` residues in the GIRK2 channel, as rendered in PyMOL using the final solvated structure (`with_water.pdb`) produced by the preparation script:
 
 <p align="center">
   <img src="./disulfide_bridge.png" alt="Disulfide bridge between CYX residues" width="400"/>
 </p>
 
-This covalent bond (colored red in this representation) connects the sulfur atoms (`SG`) of the two CYX residues that originally were annotated as `CYS` in the PDB file.  
-The script automatically handled:
-- Renaming `CYS` to `CYX` for disulfide pairs (from `SSBOND` lines)
-- Removing the hydrogen atom (`HG`) that would block bonding
-- Creating the bond using the `bond` command in `tleap`
+This covalent bond (colored red in this representation) connects the sulfur atoms (`SG`) of the two CYX residues that originally were annotated as `CYS` in the PDB file.
 
 This ensures that the structural integrity of the protein is preserved during simulation.
 
