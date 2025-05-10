@@ -78,20 +78,22 @@ To fix all of this, I created a modular, automated workflow that:
 
 ---
 
-## 📥 Want to Try It Yourself?
+## 📥  Reproduce This Example
 
 If you want to reproduce this with 3SYC:
 
-### 🔧 Step 1: Download the PDB file
+### 🔧 Step 1: Download the PDB file (optional)
 Go to [3SYC](https://www.rcsb.org/structure/3SYC), download it, and save it as:
 
 ```
 3syc.pdb
 ```
+Or download the girk2_3syc_example folder, the 3syc.pdb file is already included.
+
 ### 🧪 Step 2: Run the Full Preparation Script
 
-Once you’ve downloaded `3syc.pdb`, place it in the `girk2_3syc_example/` folder (where the `run_all.sh` script is located).  
-Then open your terminal and run:
+Go to `girk2_3syc_example/` folder where the `run_all.sh` script and 3syc.pdb are located.  
+Open your terminal and run:
 
 ```bash
 cd girk2_3syc_example/
@@ -123,6 +125,19 @@ This command automatically performs all the setup steps for running AMBER simula
 
 Once completed, you’ll be ready to start **energy minimization** using these AMBER-ready files.
 
+### 📸 Visualizing the Disulfide Bond
+
+Below is a snapshot of the disulfide bridge formed between two `CYX` residues in the GIRK2 channel, as rendered in PyMOL after running the setup script:
+
+![Disulfide bridge between CYX residues](./disulfide_bridge.png)
+
+This covalent bond (colored red in this representation) connects the sulfur atoms (`SG`) of the two CYX residues that originally were annotated as `CYS` in the PDB file.  
+The script automatically handled:
+- Renaming `CYS` to `CYX` for disulfide pairs (from `SSBOND` lines)
+- Removing the hydrogen atom (`HG`) that would block bonding
+- Creating the bond using the `bond` command in `tleap`
+
+This ensures that the structural integrity of the protein is preserved during simulation.
 
 ---
 
