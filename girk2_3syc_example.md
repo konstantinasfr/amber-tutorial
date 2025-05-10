@@ -129,7 +129,9 @@ Once completed, you’ll be ready to start **energy minimization** using these A
 
 Below is a snapshot of the disulfide bridge formed between two `CYX` residues in the GIRK2 channel, as rendered in PyMOL after running the setup script:
 
-![Disulfide bridge between CYX residues](./disulfide_bridge.png)
+<p align="center">
+  <img src="./disulfide_bridge.png" alt="Disulfide bridge between CYX residues" width="400"/>
+</p>
 
 This covalent bond (colored red in this representation) connects the sulfur atoms (`SG`) of the two CYX residues that originally were annotated as `CYS` in the PDB file.  
 The script automatically handled:
