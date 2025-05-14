@@ -1,7 +1,7 @@
 
-## 🧪 My Example: Preparing the GIRK2 Channel (3SYC)
+## 🧪 My Example: Preparing the GIRK2 Channel (6XIS)
 
-To test this workflow, I used the structure [**3SYC**](https://www.rcsb.org/structure/3SYC), which is the **crystal structure of the G protein-gated inward rectifier K⁺ channel GIRK2 (Kir3.2), D228N mutant**. The structure contains **only the protein** (no ligands), and I wanted to simulate it using AMBER.
+To test this workflow, I used the structure [**6XIS**](https://www.rcsb.org/structure/6XIS), which is the **crystal structure of the G protein-gated inward rectifier K⁺ channel GIRK2 (Kir3.2) in apo form**. The structure contains **only the protein** (no ligands), and I wanted to simulate it using AMBER.
 
 At first, I thought I could follow the one-file `tleap.in` approach shown above, but I quickly discovered that it wouldn’t work for this system. Here's why:
 
@@ -14,7 +14,9 @@ At first, I thought I could follow the one-file `tleap.in` approach shown above,
 In the original PDB file, there is a clear disulfide bond listed:
 
 ```
-SSBOND   1 CYS A  134    CYS A  166                          1555   1555  2.04
+SSBOND   1 CYS B  134    CYS B  166                          1555   1555  2.05  
+SSBOND   2 CYS C  134    CYS C  166                          1555   1555  2.07  
+SSBOND   3 CYS D  134    CYS D  166                          1555   1555  2.03 
 ```
 
 You might think that this means you can write in `tleap.in`:
@@ -83,21 +85,21 @@ To fix all of this, I created a modular, automated workflow that:
 If you want to reproduce this with 3SYC:
 
 ### 🔧 Step 1: Download the PDB file (optional)
-Go to [3SYC](https://www.rcsb.org/structure/3SYC), download it, and save it as:
+Go to [6XIS](https://www.rcsb.org/structure/6XIS), download Biological Assembly 1, and save it as:
 
 ```
-3syc.pdb
+6xis.pdb1
 ```
-Or download the girk2_3syc_example folder, the 3syc.pdb file is already included.
+Or download the girk2_6xis_example folder, the 6xis.pdb1 file is already included.
 
 ### 🧪 Step 2: Run the Full Preparation Script
 
-Go to `girk2_3syc_example/` folder where the `run_all.sh` script and 3syc.pdb are located.  
+Go to `girk2_6xis_example/` folder where the `run_all.sh` script and 6xis.pdb1 are located.  
 Open your terminal and run:
 
 ```bash
-cd girk2_3syc_example/
-bash run_all.sh 3syc.pdb
+cd girk2_6xis_example/
+bash run_all.sh 6xis.pdb1
 ```
 
 ---
@@ -106,7 +108,7 @@ bash run_all.sh 3syc.pdb
 
 This command automatically performs all the setup steps for running AMBER simulations:
 
-- ✅ **Creates a folder** named `3syc/` to keep everything organized.
+- ✅ **Creates a folder** named `6xis/` to keep everything organized.
 - ✅ **Adds missing hydrogens** to the protein structure using TLeap.
 - ✅ **Handles disulfide bonds** by:
   - Renaming `CYS` residues involved in `SSBOND` links to `CYX`
@@ -117,7 +119,7 @@ This command automatically performs all the setup steps for running AMBER simula
 - ✅ **Generates AMBER input files**, saved in:
 
 ```
-3syc/amber_input/
+6xis/amber_input/
 ├── com.prmtop       # Topology file for AMBER
 ├── com.inpcrd       # Coordinates file for AMBER
 └── with_water.pdb   # Solvated, neutralized structure (for visualization)
