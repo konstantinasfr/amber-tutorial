@@ -123,6 +123,8 @@ This command automatically performs all the setup steps for running AMBER simula
 ├── com.prmtop       # Topology file for AMBER
 ├── com.inpcrd       # Coordinates file for AMBER
 └── with_water.pdb   # Solvated, neutralized structure (for visualization)
+
+Note: com.prmtop is not included in the directory because it's more that 25MB.
 ```
 
 Once completed, you’ll be ready to start **energy minimization** using these AMBER-ready files.
