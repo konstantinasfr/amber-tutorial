@@ -1,0 +1,2039 @@
+log started: Wed May 14 12:26:15 2025
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the ff19SB force field
+>> # ----- NOTE: this is designed for PDB format 3!
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "H"   "H" "sp3" }
+>> 	{ "HO"  "H" "sp3" }
+>> 	{ "HS"  "H" "sp3" }
+>> 	{ "H1"  "H" "sp3" }
+>> 	{ "H2"  "H" "sp3" }
+>> 	{ "H3"  "H" "sp3" }
+>> 	{ "H4"  "H" "sp3" }
+>> 	{ "H5"  "H" "sp3" }
+>> 	{ "HW"  "H" "sp3" }
+>> 	{ "HC"  "H" "sp3" }
+>> 	{ "HA"  "H" "sp3" }
+>> 	{ "HP"  "H" "sp3" }
+>> 	{ "HZ"  "H" "sp3" }
+>> 	{ "OH"  "O" "sp3" }
+>> 	{ "OS"  "O" "sp3" }
+>> 	{ "O"   "O" "sp2" }
+>> 	{ "O2"  "O" "sp2" }
+>> 	{ "OP"  "O" "sp2" }
+>> 	{ "OW"  "O" "sp3" }
+>> 	{ "CT"  "C" "sp3" }
+>> 	{ "CX"  "C" "sp3" }
+>> 	{ "XC"  "C" "sp3" }
+>> 	{ "C8"  "C" "sp3" }
+>> 	{ "2C"  "C" "sp3" }
+>> 	{ "3C"  "C" "sp3" }
+>> 	{ "CH"  "C" "sp3" }
+>> 	{ "CS"  "C" "sp2" }
+>> 	{ "C"   "C" "sp2" }
+>> 	{ "CO"   "C" "sp2" }
+>> 	{ "C*"  "C" "sp2" }
+>> 	{ "CA"  "C" "sp2" }
+>> 	{ "CB"  "C" "sp2" }
+>> 	{ "CC"  "C" "sp2" }
+>> 	{ "CN"  "C" "sp2" }
+>> 	{ "CM"  "C" "sp2" }
+>> 	{ "CK"  "C" "sp2" }
+>> 	{ "CQ"  "C" "sp2" }
+>> 	{ "CD"  "C" "sp2" }
+>> 	{ "C5"  "C" "sp2" }
+>> 	{ "C4"  "C" "sp2" }
+>> 	{ "CP"  "C" "sp2" }
+>> 	{ "CI"  "C" "sp3" }
+>> 	{ "CJ"  "C" "sp2" }
+>> 	{ "CW"  "C" "sp2" }
+>> 	{ "CV"  "C" "sp2" }
+>> 	{ "CR"  "C" "sp2" }
+>> 	{ "CA"  "C" "sp2" }
+>> 	{ "CY"  "C" "sp2" }
+>> 	{ "C0"  "Ca" "sp3" }
+>> 	{ "MG"  "Mg" "sp3" }
+>> 	{ "N"   "N" "sp2" }
+>> 	{ "NA"  "N" "sp2" }
+>> 	{ "N2"  "N" "sp2" }
+>> 	{ "N*"  "N" "sp2" }
+>> 	{ "NP"  "N" "sp2" }
+>> 	{ "NQ"  "N" "sp2" }
+>> 	{ "NB"  "N" "sp2" }
+>> 	{ "NC"  "N" "sp2" }
+>> 	{ "NT"  "N" "sp3" }
+>> 	{ "NY"  "N" "sp2" }
+>> 	{ "N3"  "N" "sp3" }
+>> 	{ "S"   "S" "sp3" }
+>> 	{ "SH"  "S" "sp3" }
+>> 	{ "P"   "P" "sp3" }
+>> 	{ "LP"  ""  "sp3" }
+>> 	{ "EP"  ""  "sp3" }
+>> 	{ "F"   "F" "sp3" }
+>> 	{ "Cl"  "Cl" "sp3" }
+>> 	{ "Br"  "Br" "sp3" }
+>> 	{ "I"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the main parameter set.
+>> #
+>> set default cmap on
+>> parm19 = loadamberparams parm19.dat
+Loading parameters: /shared/centos7/amber/amber22/amber22/dat/leap/parm/parm19.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA + ff19SB
+(UNKNOWN ATOM TYPE: Zn)
+(UNKNOWN ATOM TYPE: EP)
+>> frcmod19SB = loadamberparams frcmod.ff19SB
+Loading parameters: /shared/centos7/amber/amber22/amber22/dat/leap/parm/frcmod.ff19SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff19SB AA-specific backbone CMAPs for protein 07/25/2019
+>> #
+>> #	Load main chain and terminating amino acid libraries
+>> #
+>> loadOff amino19.lib
+Loading library: /shared/centos7/amber/amber22/amber22/dat/leap/lib/amino19.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: HYP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>> loadOff aminoct12.lib
+Loading library: /shared/centos7/amber/amber22/amber22/dat/leap/lib/aminoct12.lib
+Loading: CALA
+Loading: CARG
+Loading: CASN
+Loading: CASP
+Loading: CCYS
+Loading: CCYX
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CHYP
+Loading: CILE
+Loading: CLEU
+Loading: CLYS
+Loading: CMET
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>> loadOff aminont12.lib
+Loading library: /shared/centos7/amber/amber22/amber22/dat/leap/lib/aminont12.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASN
+Loading: NASP
+Loading: NCYS
+Loading: NCYX
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>> 
+>> #
+>> #	Define the PDB name map for the amino acids
+>> #
+>> addPdbResMap {
+>>   { 0 "HYP" "NHYP" } { 1 "HYP" "CHYP" }
+>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>> }
+>> 
+>> #
+>> # assume that most often proteins use HIE
+>> #
+>> NHIS = NHIE
+>> HIS = HIE
+>> CHIS = CHIE
+> 
+> source leaprc.gaff2
+----- Source: /shared/centos7/amber/amber22/amber22/dat/leap/cmd/leaprc.gaff2
+----- Source of /shared/centos7/amber/amber22/amber22/dat/leap/cmd/leaprc.gaff2 done
+>> logFile leap.log
+log started: Wed May 14 12:26:15 2025
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "op"  "O" "sp3" }
+>> 	{ "oq"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cs"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "n5"  "N" "sp3" }
+>> 	{ "n6"  "N" "sp3" }
+>> 	{ "n7"  "N" "sp3" }
+>> 	{ "n8"  "N" "sp3" }
+>> 	{ "n9"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "ni"  "N" "sp2" }
+>> 	{ "nj"  "N" "sp2" }
+>> 	{ "nk"  "N" "sp3" }
+>> 	{ "nl"  "N" "sp3" }
+>> 	{ "nm"  "N" "sp2" }
+>> 	{ "nn"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "np"  "N" "sp3" }
+>> 	{ "nq"  "N" "sp3" }
+>> 	{ "ns"  "N" "sp2" }
+>> 	{ "nt"  "N" "sp2" }
+>> 	{ "nu"  "N" "sp2" }
+>> 	{ "nv"  "N" "sp2" }
+>> 	{ "nx"  "N" "sp3" }
+>> 	{ "ny"  "N" "sp3" }
+>> 	{ "nz"  "N" "sp3" }
+>> 	{ "n+"  "N" "sp3" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "sp"   "S" "sp3" }
+>> 	{ "sq"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff2.dat
+Loading parameters: /shared/centos7/amber/amber22/amber22/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.11, May 2016)
+> 
+> source leaprc.lipid21
+----- Source: /shared/centos7/amber/amber22/amber22/dat/leap/cmd/leaprc.lipid21
+----- Source of /shared/centos7/amber/amber22/amber22/dat/leap/cmd/leaprc.lipid21 done
+>> #
+>> # Set log file
+>> #
+>> logFile leap.log
+log started: Wed May 14 12:26:15 2025
+
+Log file: ./leap.log
+>> #
+>> # leaprc for loading the Lipid21 v1.0 force field
+>> #       of Dickson, Gould and Walker.
+>> #       
+>> #       Note this file is designed to be used in addition
+>> #       to one of the standard protein force field leaprc files
+>> #       even if you are running a pure lipid.
+>> #
+>> #       For example, you would enter in leap:
+>> #         source leaprc.ff19SB
+>> #         source leaprc.lipid21
+>> #       
+>> # Load atom type hybridizations
+>> #
+>> addAtomTypes {
+>>     { "cA"  "C" "sp3" }
+>>     { "cB"  "C" "sp2" }
+>>     { "cC"  "C" "sp2" }
+>>     { "cD"  "C" "sp3" }
+>>     { "hA"  "H" "sp3" }
+>>     { "hB"  "H" "sp3" }
+>>     { "hE"  "H" "sp3" }
+>>     { "hL"  "H" "sp3" }
+>>     { "hN"  "H" "sp3" }
+>>     { "hO"  "H" "sp3" }
+>>     { "hX"  "H" "sp3" }
+>>     { "nA"  "N" "sp3" }
+>>     { "nN"  "N" "sp2" }
+>>     { "oC"  "O" "sp2" }
+>>     { "oH"  "O" "sp3" }
+>>     { "oO"  "O" "sp2" }
+>>     { "oP"  "O" "sp2" }
+>>     { "oS"  "O" "sp3" }
+>>     { "oT"  "O" "sp3" }
+>>     { "pA"  "P" "sp3" }
+>> }
+>> #
+>> # Load the Lipid21 parameter set.
+>> #
+>> lipid21 = loadamberparams lipid21.dat 
+Loading parameters: /shared/centos7/amber/amber22/amber22/dat/leap/parm/lipid21.dat
+Reading title:
+AMBER Lipid21 v1.0 C. J. Dickson, R.C. Walker, I.R. Gould.
+>> #
+>> # Load the Lipid21 master lib file.
+>> #
+>> loadoff lipid21.lib
+Loading library: /shared/centos7/amber/amber22/amber22/dat/leap/lib/lipid21.lib
+Loading: AR
+Loading: CHL
+Loading: DHA
+Loading: LAL
+Loading: MY
+Loading: OL
+Loading: PA
+Loading: PC
+Loading: PE
+Loading: PGR
+Loading: PGS
+Loading: PH-
+Loading: PS
+Loading: SA
+Loading: SPM
+Loading: ST
+>> 
+> 
+> source leaprc.water.tip3p
+----- Source: /shared/centos7/amber/amber22/amber22/dat/leap/cmd/leaprc.water.tip3p
+----- Source of /shared/centos7/amber/amber22/amber22/dat/leap/cmd/leaprc.water.tip3p done
+>> #
+>> #       Load water and ions for TIP3P + Li/Merz monovalent ions 
+>> #       + Joung-Chetham monovalent ions
+>> #       + Li/Merz highly charged ions (+2 to +4, 12-6 normal usage set)
+>> #
+>> #       Note: the Li/Merz monovalent set is loaded only to get Tl+,
+>> #          Cu+, Ag+ NH4+, H3O+.  Since we load Joung-Cheatham second,
+>> #          the alkali halide parameters come from the Joung-Cheatham set
+>> #
+>> addAtomTypes {
+>> 	{ "HW"  "H" "sp3" }
+>> 	{ "OW"  "O" "sp3" }
+>> 	{ "F-"   "F" "sp3" }
+>> 	{ "Cl-"  "Cl" "sp3" }
+>> 	{ "Br-"  "Br" "sp3" }
+>> 	{ "I-"   "I"  "sp3" }
+>> 	{ "Li+"  "Li"  "sp3" }
+>> 	{ "Na+"  "Na"  "sp3" }
+>> 	{ "K+"  "K"  "sp3" }
+>> 	{ "Rb+"  "Rb"  "sp3" }
+>> 	{ "Cs+"  "Cs"  "sp3" }
+>> 	{ "Mg+"  "Mg"  "sp3" }
+>>     { "Tl+"  "Tl"  "sp3" }
+>>     { "Cu+"  "Cu"  "sp3" }
+>>     { "Ag+"  "Ag"  "sp3" }
+>>     { "NH4+"  "N"  "sp3" }
+>>     { "H3O+"  "O"  "sp3" }
+>>     { "Be2+" "Be"  "sp3" }
+>>     { "Cu2+" "Cu"  "sp3" }
+>>     { "Ni2+" "Ni"  "sp3" }
+>>     { "Pt2+" "Pt"  "sp3" }
+>>     { "Zn2+" "Zn"  "sp3" }
+>>     { "Co2+" "Co"  "sp3" }
+>>     { "Pd2+" "Pd"  "sp3" }
+>>     { "Ag2+" "Ag"  "sp3" }
+>>     { "Cr2+" "Cr"  "sp3" }
+>>     { "Fe2+" "Fe"  "sp3" }
+>>     { "Mg2+" "Mg"  "sp3" }
+>>     { "V2+"  "V"   "sp3" }
+>>     { "Mn2+" "Mn"  "sp3" }
+>>     { "Hg2+" "Hg"  "sp3" }
+>>     { "Cd2+" "Cd"  "sp3" }
+>>     { "Yb2+" "Yb"  "sp3" }
+>>     { "Ca2+" "Ca"  "sp3" }
+>>     { "Sn2+" "Sn"  "sp3" }
+>>     { "Pb2+" "Pb"  "sp3" }
+>>     { "Eu2+" "Eu"  "sp3" }
+>>     { "Sr2+" "Sr"  "sp3" }
+>>     { "Sm2+" "Sm"  "sp3" }
+>>     { "Ba2+" "Ba"  "sp3" }
+>>     { "Ra2+" "Ra"  "sp3" }
+>>     { "Al3+" "Al"  "sp3" }
+>>     { "Fe3+" "Fe"  "sp3" }
+>>     { "Cr3+" "Cr"  "sp3" }
+>>     { "In3+" "In"  "sp3" }
+>>     { "Tl3+" "Tl"  "sp3" }
+>>     { "Y3+"  "Y"   "sp3" }
+>>     { "La3+" "La"  "sp3" }
+>>     { "Ce3+" "Ce"  "sp3" }
+>>     { "Pr3+" "Pr"  "sp3" }
+>>     { "Nd3+" "Nd"  "sp3" }
+>>     { "Sm3+" "Sm"  "sp3" }
+>>     { "Eu3+" "Eu"  "sp3" }
+>>     { "Gd3+" "Gd"  "sp3" }
+>>     { "Tb3+" "Tb"  "sp3" }
+>>     { "Dy3+" "Dy"  "sp3" }
+>>     { "Er3+" "Er"  "sp3" }
+>>     { "Tm3+" "Tm"  "sp3" }
+>>     { "Lu3+" "Lu"  "sp3" }
+>>     { "Hf4+" "Hf"  "sp3" }
+>>     { "Zr4+" "Zr"  "sp3" }
+>>     { "Ce4+" "Ce"  "sp3" }
+>>     { "U4+"  "U"   "sp3" }
+>>     { "Pu4+" "Pu"  "sp3" }
+>>     { "Th4+" "Th"  "sp3" }
+>> }
+>> loadOff atomic_ions.lib
+Loading library: /shared/centos7/amber/amber22/amber22/dat/leap/lib/atomic_ions.lib
+Loading: AG
+Loading: AL
+Loading: Ag
+Loading: BA
+Loading: BR
+Loading: Be
+Loading: CA
+Loading: CD
+Loading: CE
+Loading: CL
+Loading: CO
+Loading: CR
+Loading: CS
+Loading: CU
+Loading: CU1
+Loading: Ce
+Loading: Cl-
+Loading: Cr
+Loading: Dy
+Loading: EU
+Loading: EU3
+Loading: Er
+Loading: F
+Loading: FE
+Loading: FE2
+Loading: GD3
+Loading: H3O+
+Loading: HE+
+Loading: HG
+Loading: HZ+
+Loading: Hf
+Loading: IN
+Loading: IOD
+Loading: K
+Loading: K+
+Loading: LA
+Loading: LI
+Loading: LU
+Loading: MG
+Loading: MN
+Loading: NA
+Loading: NH4
+Loading: NI
+Loading: Na+
+Loading: Nd
+Loading: PB
+Loading: PD
+Loading: PR
+Loading: PT
+Loading: Pu
+Loading: RB
+Loading: Ra
+Loading: SM
+Loading: SR
+Loading: Sm
+Loading: Sn
+Loading: TB
+Loading: TL
+Loading: Th
+Loading: Tl
+Loading: Tm
+Loading: U4+
+Loading: V2+
+Loading: Y
+Loading: YB2
+Loading: ZN
+Loading: Zr
+>> loadOff solvents.lib
+Loading library: /shared/centos7/amber/amber22/amber22/dat/leap/lib/solvents.lib
+Loading: CHCL3BOX
+Loading: DC4
+Loading: FB3
+Loading: FB3BOX
+Loading: FB4
+Loading: FB4BOX
+Loading: MEOHBOX
+Loading: NMABOX
+Loading: O3P
+Loading: OP3
+Loading: OPC
+Loading: OPC3BOX
+Loading: OPCBOX
+Loading: PL3
+Loading: POL3BOX
+Loading: QSPCFWBOX
+Loading: SPC
+Loading: SPCBOX
+Loading: SPCFWBOX
+Loading: SPF
+Loading: SPG
+Loading: T4E
+Loading: TIP3PBOX
+Loading: TIP3PFBOX
+Loading: TIP4PBOX
+Loading: TIP4PEWBOX
+Loading: TIP5PBOX
+Loading: TP3
+Loading: TP4
+Loading: TP5
+Loading: TPF
+>> HOH = TP3
+>> WAT = TP3
+>> loadAmberParams frcmod.tip3p
+Loading parameters: /shared/centos7/amber/amber22/amber22/dat/leap/parm/frcmod.tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for TIP3P water
+>> loadAmberParams frcmod.ions1lm_126_tip3p
+Loading parameters: /shared/centos7/amber/amber22/amber22/dat/leap/parm/frcmod.ions1lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of monovalent ions for TIP3P water model (12-6 normal usage set)
+>> loadAmberParams frcmod.ionsjc_tip3p
+Loading parameters: /shared/centos7/amber/amber22/amber22/dat/leap/parm/frcmod.ionsjc_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP3P water from Joung & Cheatham JPCB (2008)
+>> loadAmberParams frcmod.ions234lm_126_tip3p
+Loading parameters: /shared/centos7/amber/amber22/amber22/dat/leap/parm/frcmod.ions234lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for TIP3P water model (12-6 normal usage set)
+>> 
+> 
+> loadamberparams frcmod.ionsjc_tip3p
+Loading parameters: /shared/centos7/amber/amber22/amber22/dat/leap/parm/frcmod.ionsjc_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP3P water from Joung & Cheatham JPCB (2008)
+> # loadamberprep PIP.prepi
+> # loadamberparams PIP.frcmod
+> abc = loadpdb ../6xis.pdb1
+Loading PDB file: ../6xis.pdb1
+Matching PDB residue names to LEaP variables.
+Mapped residue ILE, term: Terminal/beginning, seq. number: 0 to: NILE.
+Mapped residue SER, term: Terminal/last, seq. number: 309 to: CSER.
+Mapped residue ILE, term: Terminal/beginning, seq. number: 310 to: NILE.
+Mapped residue SER, term: Terminal/last, seq. number: 619 to: CSER.
+Mapped residue ILE, term: Terminal/beginning, seq. number: 620 to: NILE.
+Mapped residue SER, term: Terminal/last, seq. number: 929 to: CSER.
+Mapped residue ILE, term: Terminal/beginning, seq. number: 930 to: NILE.
+Mapped residue SER, term: Terminal/last, seq. number: 1239 to: CSER.
+  Added missing heavy atom: .R<NILE 55>.A<CG2 9>
+  Added missing heavy atom: .R<NILE 55>.A<CG1 13>
+  Added missing heavy atom: .R<NILE 55>.A<CD1 16>
+  Added missing heavy atom: .R<ARG 67>.A<CG 8>
+  Added missing heavy atom: .R<ARG 67>.A<CD 11>
+  Added missing heavy atom: .R<ARG 67>.A<NE 14>
+  Added missing heavy atom: .R<ARG 67>.A<CZ 16>
+  Added missing heavy atom: .R<ARG 67>.A<NH1 17>
+  Added missing heavy atom: .R<ARG 67>.A<NH2 20>
+  Added missing heavy atom: .R<THR 70>.A<CG2 7>
+  Added missing heavy atom: .R<THR 70>.A<OG1 11>
+  Added missing heavy atom: .R<PHE 73>.A<CG 8>
+  Added missing heavy atom: .R<PHE 73>.A<CD1 9>
+  Added missing heavy atom: .R<PHE 73>.A<CD2 17>
+  Added missing heavy atom: .R<PHE 73>.A<CE1 11>
+  Added missing heavy atom: .R<PHE 73>.A<CE2 15>
+  Added missing heavy atom: .R<PHE 73>.A<CZ 13>
+  Added missing heavy atom: .R<VAL 77>.A<CG1 7>
+  Added missing heavy atom: .R<VAL 77>.A<CG2 11>
+  Added missing heavy atom: .R<LYS 80>.A<CG 8>
+  Added missing heavy atom: .R<LYS 80>.A<CD 11>
+  Added missing heavy atom: .R<LYS 80>.A<CE 14>
+  Added missing heavy atom: .R<LYS 80>.A<NZ 17>
+  Added missing heavy atom: .R<PHE 88>.A<CG 8>
+  Added missing heavy atom: .R<PHE 88>.A<CD1 9>
+  Added missing heavy atom: .R<PHE 88>.A<CD2 17>
+  Added missing heavy atom: .R<PHE 88>.A<CE1 11>
+  Added missing heavy atom: .R<PHE 88>.A<CE2 15>
+  Added missing heavy atom: .R<PHE 88>.A<CZ 13>
+  Added missing heavy atom: .R<ARG 110>.A<CG 8>
+  Added missing heavy atom: .R<ARG 110>.A<CD 11>
+  Added missing heavy atom: .R<ARG 110>.A<NE 14>
+  Added missing heavy atom: .R<ARG 110>.A<CZ 16>
+  Added missing heavy atom: .R<ARG 110>.A<NH1 17>
+  Added missing heavy atom: .R<ARG 110>.A<NH2 20>
+  Added missing heavy atom: .R<ASP 114>.A<CG 8>
+  Added missing heavy atom: .R<ASP 114>.A<OD1 9>
+  Added missing heavy atom: .R<ASP 114>.A<OD2 10>
+  Added missing heavy atom: .R<ILE 116>.A<CG2 7>
+  Added missing heavy atom: .R<ILE 116>.A<CG1 11>
+  Added missing heavy atom: .R<ILE 116>.A<CD1 14>
+  Added missing heavy atom: .R<GLU 117>.A<CG 8>
+  Added missing heavy atom: .R<GLU 117>.A<CD 11>
+  Added missing heavy atom: .R<GLU 117>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 117>.A<OE2 13>
+  Added missing heavy atom: .R<ASP 118>.A<CG 8>
+  Added missing heavy atom: .R<ASP 118>.A<OD1 9>
+  Added missing heavy atom: .R<ASP 118>.A<OD2 10>
+  Added missing heavy atom: .R<SER 120>.A<OG 8>
+  Added missing heavy atom: .R<TRP 121>.A<CG 8>
+  Added missing heavy atom: .R<TRP 121>.A<CD1 9>
+  Added missing heavy atom: .R<TRP 121>.A<CD2 22>
+  Added missing heavy atom: .R<TRP 121>.A<NE1 11>
+  Added missing heavy atom: .R<TRP 121>.A<CE2 13>
+  Added missing heavy atom: .R<TRP 121>.A<CE3 20>
+  Added missing heavy atom: .R<TRP 121>.A<CZ2 14>
+  Added missing heavy atom: .R<TRP 121>.A<CZ3 18>
+  Added missing heavy atom: .R<TRP 121>.A<CH2 16>
+  Added missing heavy atom: .R<THR 122>.A<CG2 7>
+  Added missing heavy atom: .R<THR 122>.A<OG1 11>
+  Added missing heavy atom: .R<PRO 123>.A<CG 5>
+  Added missing heavy atom: .R<PRO 123>.A<CD 2>
+  Added missing heavy atom: .R<VAL 125>.A<CG1 7>
+  Added missing heavy atom: .R<VAL 125>.A<CG2 11>
+  Added missing heavy atom: .R<GLU 142>.A<CG 8>
+  Added missing heavy atom: .R<GLU 142>.A<CD 11>
+  Added missing heavy atom: .R<GLU 142>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 142>.A<OE2 13>
+  Added missing heavy atom: .R<ILE 145>.A<CG2 7>
+  Added missing heavy atom: .R<ILE 145>.A<CG1 11>
+  Added missing heavy atom: .R<ILE 145>.A<CD1 14>
+  Added missing heavy atom: .R<ILE 152>.A<CG2 7>
+  Added missing heavy atom: .R<ILE 152>.A<CG1 11>
+  Added missing heavy atom: .R<ILE 152>.A<CD1 14>
+  Added missing heavy atom: .R<LYS 155>.A<CG 8>
+  Added missing heavy atom: .R<LYS 155>.A<CD 11>
+  Added missing heavy atom: .R<LYS 155>.A<CE 14>
+  Added missing heavy atom: .R<LYS 155>.A<NZ 17>
+  Added missing heavy atom: .R<GLU 158>.A<CG 8>
+  Added missing heavy atom: .R<GLU 158>.A<CD 11>
+  Added missing heavy atom: .R<GLU 158>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 158>.A<OE2 13>
+  Added missing heavy atom: .R<ILE 160>.A<CG2 7>
+  Added missing heavy atom: .R<ILE 160>.A<CG1 11>
+  Added missing heavy atom: .R<ILE 160>.A<CD1 14>
+  Added missing heavy atom: .R<LEU 162>.A<CG 8>
+  Added missing heavy atom: .R<LEU 162>.A<CD1 10>
+  Added missing heavy atom: .R<LEU 162>.A<CD2 14>
+  Added missing heavy atom: .R<GLN 166>.A<CG 8>
+  Added missing heavy atom: .R<GLN 166>.A<CD 11>
+  Added missing heavy atom: .R<GLN 166>.A<OE1 12>
+  Added missing heavy atom: .R<GLN 166>.A<NE2 13>
+  Added missing heavy atom: .R<PHE 176>.A<CG 8>
+  Added missing heavy atom: .R<PHE 176>.A<CD1 9>
+  Added missing heavy atom: .R<PHE 176>.A<CD2 17>
+  Added missing heavy atom: .R<PHE 176>.A<CE1 11>
+  Added missing heavy atom: .R<PHE 176>.A<CE2 15>
+  Added missing heavy atom: .R<PHE 176>.A<CZ 13>
+  Added missing heavy atom: .R<MET 181>.A<CG 8>
+  Added missing heavy atom: .R<MET 181>.A<SD 11>
+  Added missing heavy atom: .R<MET 181>.A<CE 12>
+  Added missing heavy atom: .R<LYS 202>.A<CG 8>
+  Added missing heavy atom: .R<LYS 202>.A<CD 11>
+  Added missing heavy atom: .R<LYS 202>.A<CE 14>
+  Added missing heavy atom: .R<LYS 202>.A<NZ 17>
+  Added missing heavy atom: .R<ARG 208>.A<CG 8>
+  Added missing heavy atom: .R<ARG 208>.A<CD 11>
+  Added missing heavy atom: .R<ARG 208>.A<NE 14>
+  Added missing heavy atom: .R<ARG 208>.A<CZ 16>
+  Added missing heavy atom: .R<ARG 208>.A<NH1 17>
+  Added missing heavy atom: .R<ARG 208>.A<NH2 20>
+  Added missing heavy atom: .R<LYS 284>.A<CG 8>
+  Added missing heavy atom: .R<LYS 284>.A<CD 11>
+  Added missing heavy atom: .R<LYS 284>.A<CE 14>
+  Added missing heavy atom: .R<LYS 284>.A<NZ 17>
+  Added missing heavy atom: .R<GLU 286>.A<CG 8>
+  Added missing heavy atom: .R<GLU 286>.A<CD 11>
+  Added missing heavy atom: .R<GLU 286>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 286>.A<OE2 13>
+  Added missing heavy atom: .R<MET 302>.A<CG 8>
+  Added missing heavy atom: .R<MET 302>.A<SD 11>
+  Added missing heavy atom: .R<MET 302>.A<CE 12>
+  Added missing heavy atom: .R<GLU 328>.A<CG 8>
+  Added missing heavy atom: .R<GLU 328>.A<CD 11>
+  Added missing heavy atom: .R<GLU 328>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 328>.A<OE2 13>
+  Added missing heavy atom: .R<ASP 329>.A<CG 8>
+  Added missing heavy atom: .R<ASP 329>.A<OD1 9>
+  Added missing heavy atom: .R<ASP 329>.A<OD2 10>
+  Added missing heavy atom: .R<LYS 353>.A<CG 8>
+  Added missing heavy atom: .R<LYS 353>.A<CD 11>
+  Added missing heavy atom: .R<LYS 353>.A<CE 14>
+  Added missing heavy atom: .R<LYS 353>.A<NZ 17>
+  Added missing heavy atom: .R<GLU 363>.A<CG 8>
+  Added missing heavy atom: .R<GLU 363>.A<CD 11>
+  Added missing heavy atom: .R<GLU 363>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 363>.A<OE2 13>
+  Added missing heavy atom: .R<CSER 364>.A<OXT 12>
+  Added missing heavy atom: .R<CSER 364>.A<OG 8>
+  Added missing heavy atom: .R<NILE 365>.A<CG2 9>
+  Added missing heavy atom: .R<NILE 365>.A<CG1 13>
+  Added missing heavy atom: .R<NILE 365>.A<CD1 16>
+  Added missing heavy atom: .R<TYR 368>.A<CG 8>
+  Added missing heavy atom: .R<TYR 368>.A<CD1 9>
+  Added missing heavy atom: .R<TYR 368>.A<CD2 18>
+  Added missing heavy atom: .R<TYR 368>.A<CE1 11>
+  Added missing heavy atom: .R<TYR 368>.A<CE2 16>
+  Added missing heavy atom: .R<TYR 368>.A<CZ 13>
+  Added missing heavy atom: .R<TYR 368>.A<OH 14>
+  Added missing heavy atom: .R<ARG 377>.A<CG 8>
+  Added missing heavy atom: .R<ARG 377>.A<CD 11>
+  Added missing heavy atom: .R<ARG 377>.A<NE 14>
+  Added missing heavy atom: .R<ARG 377>.A<CZ 16>
+  Added missing heavy atom: .R<ARG 377>.A<NH1 17>
+  Added missing heavy atom: .R<ARG 377>.A<NH2 20>
+  Added missing heavy atom: .R<THR 380>.A<CG2 7>
+  Added missing heavy atom: .R<THR 380>.A<OG1 11>
+  Added missing heavy atom: .R<ASP 381>.A<CG 8>
+  Added missing heavy atom: .R<ASP 381>.A<OD1 9>
+  Added missing heavy atom: .R<ASP 381>.A<OD2 10>
+  Added missing heavy atom: .R<PHE 383>.A<CG 8>
+  Added missing heavy atom: .R<PHE 383>.A<CD1 9>
+  Added missing heavy atom: .R<PHE 383>.A<CD2 17>
+  Added missing heavy atom: .R<PHE 383>.A<CE1 11>
+  Added missing heavy atom: .R<PHE 383>.A<CE2 15>
+  Added missing heavy atom: .R<PHE 383>.A<CZ 13>
+  Added missing heavy atom: .R<VAL 387>.A<CG1 7>
+  Added missing heavy atom: .R<VAL 387>.A<CG2 11>
+  Added missing heavy atom: .R<LYS 390>.A<CG 8>
+  Added missing heavy atom: .R<LYS 390>.A<CD 11>
+  Added missing heavy atom: .R<LYS 390>.A<CE 14>
+  Added missing heavy atom: .R<LYS 390>.A<NZ 17>
+  Added missing heavy atom: .R<PHE 398>.A<CG 8>
+  Added missing heavy atom: .R<PHE 398>.A<CD1 9>
+  Added missing heavy atom: .R<PHE 398>.A<CD2 17>
+  Added missing heavy atom: .R<PHE 398>.A<CE1 11>
+  Added missing heavy atom: .R<PHE 398>.A<CE2 15>
+  Added missing heavy atom: .R<PHE 398>.A<CZ 13>
+  Added missing heavy atom: .R<ILE 412>.A<CG2 7>
+  Added missing heavy atom: .R<ILE 412>.A<CG1 11>
+  Added missing heavy atom: .R<ILE 412>.A<CD1 14>
+  Added missing heavy atom: .R<ARG 420>.A<CG 8>
+  Added missing heavy atom: .R<ARG 420>.A<CD 11>
+  Added missing heavy atom: .R<ARG 420>.A<NE 14>
+  Added missing heavy atom: .R<ARG 420>.A<CZ 16>
+  Added missing heavy atom: .R<ARG 420>.A<NH1 17>
+  Added missing heavy atom: .R<ARG 420>.A<NH2 20>
+  Added missing heavy atom: .R<ASP 424>.A<CG 8>
+  Added missing heavy atom: .R<ASP 424>.A<OD1 9>
+  Added missing heavy atom: .R<ASP 424>.A<OD2 10>
+  Added missing heavy atom: .R<ILE 426>.A<CG2 7>
+  Added missing heavy atom: .R<ILE 426>.A<CG1 11>
+  Added missing heavy atom: .R<ILE 426>.A<CD1 14>
+  Added missing heavy atom: .R<GLU 427>.A<CG 8>
+  Added missing heavy atom: .R<GLU 427>.A<CD 11>
+  Added missing heavy atom: .R<GLU 427>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 427>.A<OE2 13>
+  Added missing heavy atom: .R<ASP 428>.A<CG 8>
+  Added missing heavy atom: .R<ASP 428>.A<OD1 9>
+  Added missing heavy atom: .R<ASP 428>.A<OD2 10>
+  Added missing heavy atom: .R<SER 430>.A<OG 8>
+  Added missing heavy atom: .R<TRP 431>.A<CG 8>
+  Added missing heavy atom: .R<TRP 431>.A<CD1 9>
+  Added missing heavy atom: .R<TRP 431>.A<CD2 22>
+  Added missing heavy atom: .R<TRP 431>.A<NE1 11>
+  Added missing heavy atom: .R<TRP 431>.A<CE2 13>
+  Added missing heavy atom: .R<TRP 431>.A<CE3 20>
+  Added missing heavy atom: .R<TRP 431>.A<CZ2 14>
+  Added missing heavy atom: .R<TRP 431>.A<CZ3 18>
+  Added missing heavy atom: .R<TRP 431>.A<CH2 16>
+  Added missing heavy atom: .R<THR 432>.A<CG2 7>
+  Added missing heavy atom: .R<THR 432>.A<OG1 11>
+  Added missing heavy atom: .R<PRO 433>.A<CG 5>
+  Added missing heavy atom: .R<PRO 433>.A<CD 2>
+  Added missing heavy atom: .R<VAL 435>.A<CG1 7>
+  Added missing heavy atom: .R<VAL 435>.A<CG2 11>
+  Added missing heavy atom: .R<ILE 455>.A<CG2 7>
+  Added missing heavy atom: .R<ILE 455>.A<CG1 11>
+  Added missing heavy atom: .R<ILE 455>.A<CD1 14>
+  Added missing heavy atom: .R<ILE 462>.A<CG2 7>
+  Added missing heavy atom: .R<ILE 462>.A<CG1 11>
+  Added missing heavy atom: .R<ILE 462>.A<CD1 14>
+  Added missing heavy atom: .R<LYS 465>.A<CG 8>
+  Added missing heavy atom: .R<LYS 465>.A<CD 11>
+  Added missing heavy atom: .R<LYS 465>.A<CE 14>
+  Added missing heavy atom: .R<LYS 465>.A<NZ 17>
+  Added missing heavy atom: .R<GLU 468>.A<CG 8>
+  Added missing heavy atom: .R<GLU 468>.A<CD 11>
+  Added missing heavy atom: .R<GLU 468>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 468>.A<OE2 13>
+  Added missing heavy atom: .R<ILE 470>.A<CG2 7>
+  Added missing heavy atom: .R<ILE 470>.A<CG1 11>
+  Added missing heavy atom: .R<ILE 470>.A<CD1 14>
+  Added missing heavy atom: .R<PHE 486>.A<CG 8>
+  Added missing heavy atom: .R<PHE 486>.A<CD1 9>
+  Added missing heavy atom: .R<PHE 486>.A<CD2 17>
+  Added missing heavy atom: .R<PHE 486>.A<CE1 11>
+  Added missing heavy atom: .R<PHE 486>.A<CE2 15>
+  Added missing heavy atom: .R<PHE 486>.A<CZ 13>
+  Added missing heavy atom: .R<MET 491>.A<CG 8>
+  Added missing heavy atom: .R<MET 491>.A<SD 11>
+  Added missing heavy atom: .R<MET 491>.A<CE 12>
+  Added missing heavy atom: .R<LYS 512>.A<CG 8>
+  Added missing heavy atom: .R<LYS 512>.A<CD 11>
+  Added missing heavy atom: .R<LYS 512>.A<CE 14>
+  Added missing heavy atom: .R<LYS 512>.A<NZ 17>
+  Added missing heavy atom: .R<LYS 594>.A<CG 8>
+  Added missing heavy atom: .R<LYS 594>.A<CD 11>
+  Added missing heavy atom: .R<LYS 594>.A<CE 14>
+  Added missing heavy atom: .R<LYS 594>.A<NZ 17>
+  Added missing heavy atom: .R<GLU 596>.A<CG 8>
+  Added missing heavy atom: .R<GLU 596>.A<CD 11>
+  Added missing heavy atom: .R<GLU 596>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 596>.A<OE2 13>
+  Added missing heavy atom: .R<GLU 608>.A<CG 8>
+  Added missing heavy atom: .R<GLU 608>.A<CD 11>
+  Added missing heavy atom: .R<GLU 608>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 608>.A<OE2 13>
+  Added missing heavy atom: .R<MET 612>.A<CG 8>
+  Added missing heavy atom: .R<MET 612>.A<SD 11>
+  Added missing heavy atom: .R<MET 612>.A<CE 12>
+  Added missing heavy atom: .R<GLU 638>.A<CG 8>
+  Added missing heavy atom: .R<GLU 638>.A<CD 11>
+  Added missing heavy atom: .R<GLU 638>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 638>.A<OE2 13>
+  Added missing heavy atom: .R<ASP 639>.A<CG 8>
+  Added missing heavy atom: .R<ASP 639>.A<OD1 9>
+  Added missing heavy atom: .R<ASP 639>.A<OD2 10>
+  Added missing heavy atom: .R<GLU 673>.A<CG 8>
+  Added missing heavy atom: .R<GLU 673>.A<CD 11>
+  Added missing heavy atom: .R<GLU 673>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 673>.A<OE2 13>
+  Added missing heavy atom: .R<CSER 674>.A<OXT 12>
+  Added missing heavy atom: .R<CSER 674>.A<OG 8>
+  Added missing heavy atom: .R<NILE 675>.A<CG2 9>
+  Added missing heavy atom: .R<NILE 675>.A<CG1 13>
+  Added missing heavy atom: .R<NILE 675>.A<CD1 16>
+  Added missing heavy atom: .R<ARG 687>.A<CG 8>
+  Added missing heavy atom: .R<ARG 687>.A<CD 11>
+  Added missing heavy atom: .R<ARG 687>.A<NE 14>
+  Added missing heavy atom: .R<ARG 687>.A<CZ 16>
+  Added missing heavy atom: .R<ARG 687>.A<NH1 17>
+  Added missing heavy atom: .R<ARG 687>.A<NH2 20>
+  Added missing heavy atom: .R<TYR 688>.A<CG 8>
+  Added missing heavy atom: .R<TYR 688>.A<CD1 9>
+  Added missing heavy atom: .R<TYR 688>.A<CD2 18>
+  Added missing heavy atom: .R<TYR 688>.A<CE1 11>
+  Added missing heavy atom: .R<TYR 688>.A<CE2 16>
+  Added missing heavy atom: .R<TYR 688>.A<CZ 13>
+  Added missing heavy atom: .R<TYR 688>.A<OH 14>
+  Added missing heavy atom: .R<THR 690>.A<CG2 7>
+  Added missing heavy atom: .R<THR 690>.A<OG1 11>
+  Added missing heavy atom: .R<PHE 693>.A<CG 8>
+  Added missing heavy atom: .R<PHE 693>.A<CD1 9>
+  Added missing heavy atom: .R<PHE 693>.A<CD2 17>
+  Added missing heavy atom: .R<PHE 693>.A<CE1 11>
+  Added missing heavy atom: .R<PHE 693>.A<CE2 15>
+  Added missing heavy atom: .R<PHE 693>.A<CZ 13>
+  Added missing heavy atom: .R<VAL 697>.A<CG1 7>
+  Added missing heavy atom: .R<VAL 697>.A<CG2 11>
+  Added missing heavy atom: .R<LYS 700>.A<CG 8>
+  Added missing heavy atom: .R<LYS 700>.A<CD 11>
+  Added missing heavy atom: .R<LYS 700>.A<CE 14>
+  Added missing heavy atom: .R<LYS 700>.A<NZ 17>
+  Added missing heavy atom: .R<PHE 708>.A<CG 8>
+  Added missing heavy atom: .R<PHE 708>.A<CD1 9>
+  Added missing heavy atom: .R<PHE 708>.A<CD2 17>
+  Added missing heavy atom: .R<PHE 708>.A<CE1 11>
+  Added missing heavy atom: .R<PHE 708>.A<CE2 15>
+  Added missing heavy atom: .R<PHE 708>.A<CZ 13>
+  Added missing heavy atom: .R<THR 715>.A<CG2 7>
+  Added missing heavy atom: .R<THR 715>.A<OG1 11>
+  Added missing heavy atom: .R<ARG 730>.A<CG 8>
+  Added missing heavy atom: .R<ARG 730>.A<CD 11>
+  Added missing heavy atom: .R<ARG 730>.A<NE 14>
+  Added missing heavy atom: .R<ARG 730>.A<CZ 16>
+  Added missing heavy atom: .R<ARG 730>.A<NH1 17>
+  Added missing heavy atom: .R<ARG 730>.A<NH2 20>
+  Added missing heavy atom: .R<ASP 734>.A<CG 8>
+  Added missing heavy atom: .R<ASP 734>.A<OD1 9>
+  Added missing heavy atom: .R<ASP 734>.A<OD2 10>
+  Added missing heavy atom: .R<ILE 736>.A<CG2 7>
+  Added missing heavy atom: .R<ILE 736>.A<CG1 11>
+  Added missing heavy atom: .R<ILE 736>.A<CD1 14>
+  Added missing heavy atom: .R<GLU 737>.A<CG 8>
+  Added missing heavy atom: .R<GLU 737>.A<CD 11>
+  Added missing heavy atom: .R<GLU 737>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 737>.A<OE2 13>
+  Added missing heavy atom: .R<ASP 738>.A<CG 8>
+  Added missing heavy atom: .R<ASP 738>.A<OD1 9>
+  Added missing heavy atom: .R<ASP 738>.A<OD2 10>
+  Added missing heavy atom: .R<SER 740>.A<OG 8>
+  Added missing heavy atom: .R<TRP 741>.A<CG 8>
+  Added missing heavy atom: .R<TRP 741>.A<CD1 9>
+  Added missing heavy atom: .R<TRP 741>.A<CD2 22>
+  Added missing heavy atom: .R<TRP 741>.A<NE1 11>
+  Added missing heavy atom: .R<TRP 741>.A<CE2 13>
+  Added missing heavy atom: .R<TRP 741>.A<CE3 20>
+  Added missing heavy atom: .R<TRP 741>.A<CZ2 14>
+  Added missing heavy atom: .R<TRP 741>.A<CZ3 18>
+  Added missing heavy atom: .R<TRP 741>.A<CH2 16>
+  Added missing heavy atom: .R<THR 742>.A<CG2 7>
+  Added missing heavy atom: .R<THR 742>.A<OG1 11>
+  Added missing heavy atom: .R<PRO 743>.A<CG 5>
+  Added missing heavy atom: .R<PRO 743>.A<CD 2>
+  Added missing heavy atom: .R<VAL 745>.A<CG1 7>
+  Added missing heavy atom: .R<VAL 745>.A<CG2 11>
+  Added missing heavy atom: .R<ILE 772>.A<CG2 7>
+  Added missing heavy atom: .R<ILE 772>.A<CG1 11>
+  Added missing heavy atom: .R<ILE 772>.A<CD1 14>
+  Added missing heavy atom: .R<LYS 775>.A<CG 8>
+  Added missing heavy atom: .R<LYS 775>.A<CD 11>
+  Added missing heavy atom: .R<LYS 775>.A<CE 14>
+  Added missing heavy atom: .R<LYS 775>.A<NZ 17>
+  Added missing heavy atom: .R<GLU 778>.A<CG 8>
+  Added missing heavy atom: .R<GLU 778>.A<CD 11>
+  Added missing heavy atom: .R<GLU 778>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 778>.A<OE2 13>
+  Added missing heavy atom: .R<ILE 780>.A<CG2 7>
+  Added missing heavy atom: .R<ILE 780>.A<CG1 11>
+  Added missing heavy atom: .R<ILE 780>.A<CD1 14>
+  Added missing heavy atom: .R<PHE 796>.A<CG 8>
+  Added missing heavy atom: .R<PHE 796>.A<CD1 9>
+  Added missing heavy atom: .R<PHE 796>.A<CD2 17>
+  Added missing heavy atom: .R<PHE 796>.A<CE1 11>
+  Added missing heavy atom: .R<PHE 796>.A<CE2 15>
+  Added missing heavy atom: .R<PHE 796>.A<CZ 13>
+  Added missing heavy atom: .R<MET 801>.A<CG 8>
+  Added missing heavy atom: .R<MET 801>.A<SD 11>
+  Added missing heavy atom: .R<MET 801>.A<CE 12>
+  Added missing heavy atom: .R<LYS 822>.A<CG 8>
+  Added missing heavy atom: .R<LYS 822>.A<CD 11>
+  Added missing heavy atom: .R<LYS 822>.A<CE 14>
+  Added missing heavy atom: .R<LYS 822>.A<NZ 17>
+  Added missing heavy atom: .R<LYS 904>.A<CG 8>
+  Added missing heavy atom: .R<LYS 904>.A<CD 11>
+  Added missing heavy atom: .R<LYS 904>.A<CE 14>
+  Added missing heavy atom: .R<LYS 904>.A<NZ 17>
+  Added missing heavy atom: .R<GLU 906>.A<CG 8>
+  Added missing heavy atom: .R<GLU 906>.A<CD 11>
+  Added missing heavy atom: .R<GLU 906>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 906>.A<OE2 13>
+  Added missing heavy atom: .R<GLU 918>.A<CG 8>
+  Added missing heavy atom: .R<GLU 918>.A<CD 11>
+  Added missing heavy atom: .R<GLU 918>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 918>.A<OE2 13>
+  Added missing heavy atom: .R<MET 922>.A<CG 8>
+  Added missing heavy atom: .R<MET 922>.A<SD 11>
+  Added missing heavy atom: .R<MET 922>.A<CE 12>
+  Added missing heavy atom: .R<GLU 948>.A<CG 8>
+  Added missing heavy atom: .R<GLU 948>.A<CD 11>
+  Added missing heavy atom: .R<GLU 948>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 948>.A<OE2 13>
+  Added missing heavy atom: .R<ASP 949>.A<CG 8>
+  Added missing heavy atom: .R<ASP 949>.A<OD1 9>
+  Added missing heavy atom: .R<ASP 949>.A<OD2 10>
+  Added missing heavy atom: .R<TYR 952>.A<CG 8>
+  Added missing heavy atom: .R<TYR 952>.A<CD1 9>
+  Added missing heavy atom: .R<TYR 952>.A<CD2 18>
+  Added missing heavy atom: .R<TYR 952>.A<CE1 11>
+  Added missing heavy atom: .R<TYR 952>.A<CE2 16>
+  Added missing heavy atom: .R<TYR 952>.A<CZ 13>
+  Added missing heavy atom: .R<TYR 952>.A<OH 14>
+  Added missing heavy atom: .R<LYS 973>.A<CG 8>
+  Added missing heavy atom: .R<LYS 973>.A<CD 11>
+  Added missing heavy atom: .R<LYS 973>.A<CE 14>
+  Added missing heavy atom: .R<LYS 973>.A<NZ 17>
+  Added missing heavy atom: .R<GLU 983>.A<CG 8>
+  Added missing heavy atom: .R<GLU 983>.A<CD 11>
+  Added missing heavy atom: .R<GLU 983>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 983>.A<OE2 13>
+  Added missing heavy atom: .R<CSER 984>.A<OXT 12>
+  Added missing heavy atom: .R<CSER 984>.A<OG 8>
+  Added missing heavy atom: .R<NILE 985>.A<CG2 9>
+  Added missing heavy atom: .R<NILE 985>.A<CG1 13>
+  Added missing heavy atom: .R<NILE 985>.A<CD1 16>
+  Added missing heavy atom: .R<ARG 997>.A<CG 8>
+  Added missing heavy atom: .R<ARG 997>.A<CD 11>
+  Added missing heavy atom: .R<ARG 997>.A<NE 14>
+  Added missing heavy atom: .R<ARG 997>.A<CZ 16>
+  Added missing heavy atom: .R<ARG 997>.A<NH1 17>
+  Added missing heavy atom: .R<ARG 997>.A<NH2 20>
+  Added missing heavy atom: .R<THR 1000>.A<CG2 7>
+  Added missing heavy atom: .R<THR 1000>.A<OG1 11>
+  Added missing heavy atom: .R<ASP 1001>.A<CG 8>
+  Added missing heavy atom: .R<ASP 1001>.A<OD1 9>
+  Added missing heavy atom: .R<ASP 1001>.A<OD2 10>
+  Added missing heavy atom: .R<PHE 1003>.A<CG 8>
+  Added missing heavy atom: .R<PHE 1003>.A<CD1 9>
+  Added missing heavy atom: .R<PHE 1003>.A<CD2 17>
+  Added missing heavy atom: .R<PHE 1003>.A<CE1 11>
+  Added missing heavy atom: .R<PHE 1003>.A<CE2 15>
+  Added missing heavy atom: .R<PHE 1003>.A<CZ 13>
+  Added missing heavy atom: .R<LYS 1010>.A<CG 8>
+  Added missing heavy atom: .R<LYS 1010>.A<CD 11>
+  Added missing heavy atom: .R<LYS 1010>.A<CE 14>
+  Added missing heavy atom: .R<LYS 1010>.A<NZ 17>
+  Added missing heavy atom: .R<PHE 1018>.A<CG 8>
+  Added missing heavy atom: .R<PHE 1018>.A<CD1 9>
+  Added missing heavy atom: .R<PHE 1018>.A<CD2 17>
+  Added missing heavy atom: .R<PHE 1018>.A<CE1 11>
+  Added missing heavy atom: .R<PHE 1018>.A<CE2 15>
+  Added missing heavy atom: .R<PHE 1018>.A<CZ 13>
+  Added missing heavy atom: .R<ARG 1040>.A<CG 8>
+  Added missing heavy atom: .R<ARG 1040>.A<CD 11>
+  Added missing heavy atom: .R<ARG 1040>.A<NE 14>
+  Added missing heavy atom: .R<ARG 1040>.A<CZ 16>
+  Added missing heavy atom: .R<ARG 1040>.A<NH1 17>
+  Added missing heavy atom: .R<ARG 1040>.A<NH2 20>
+  Added missing heavy atom: .R<ASP 1044>.A<CG 8>
+  Added missing heavy atom: .R<ASP 1044>.A<OD1 9>
+  Added missing heavy atom: .R<ASP 1044>.A<OD2 10>
+  Added missing heavy atom: .R<HIE 1045>.A<CG 8>
+  Added missing heavy atom: .R<HIE 1045>.A<ND1 9>
+  Added missing heavy atom: .R<HIE 1045>.A<CD2 14>
+  Added missing heavy atom: .R<HIE 1045>.A<CE1 10>
+  Added missing heavy atom: .R<HIE 1045>.A<NE2 12>
+  Added missing heavy atom: .R<ILE 1046>.A<CG2 7>
+  Added missing heavy atom: .R<ILE 1046>.A<CG1 11>
+  Added missing heavy atom: .R<ILE 1046>.A<CD1 14>
+  Added missing heavy atom: .R<GLU 1047>.A<CG 8>
+  Added missing heavy atom: .R<GLU 1047>.A<CD 11>
+  Added missing heavy atom: .R<GLU 1047>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 1047>.A<OE2 13>
+  Added missing heavy atom: .R<ASP 1048>.A<CG 8>
+  Added missing heavy atom: .R<ASP 1048>.A<OD1 9>
+  Added missing heavy atom: .R<ASP 1048>.A<OD2 10>
+  Added missing heavy atom: .R<SER 1050>.A<OG 8>
+  Added missing heavy atom: .R<TRP 1051>.A<CG 8>
+  Added missing heavy atom: .R<TRP 1051>.A<CD1 9>
+  Added missing heavy atom: .R<TRP 1051>.A<CD2 22>
+  Added missing heavy atom: .R<TRP 1051>.A<NE1 11>
+  Added missing heavy atom: .R<TRP 1051>.A<CE2 13>
+  Added missing heavy atom: .R<TRP 1051>.A<CE3 20>
+  Added missing heavy atom: .R<TRP 1051>.A<CZ2 14>
+  Added missing heavy atom: .R<TRP 1051>.A<CZ3 18>
+  Added missing heavy atom: .R<TRP 1051>.A<CH2 16>
+  Added missing heavy atom: .R<THR 1052>.A<CG2 7>
+  Added missing heavy atom: .R<THR 1052>.A<OG1 11>
+  Added missing heavy atom: .R<PRO 1053>.A<CG 5>
+  Added missing heavy atom: .R<PRO 1053>.A<CD 2>
+  Added missing heavy atom: .R<VAL 1055>.A<CG1 7>
+  Added missing heavy atom: .R<VAL 1055>.A<CG2 11>
+  Added missing heavy atom: .R<THR 1071>.A<CG2 7>
+  Added missing heavy atom: .R<THR 1071>.A<OG1 11>
+  Added missing heavy atom: .R<ILE 1082>.A<CG2 7>
+  Added missing heavy atom: .R<ILE 1082>.A<CG1 11>
+  Added missing heavy atom: .R<ILE 1082>.A<CD1 14>
+  Added missing heavy atom: .R<THR 1083>.A<CG2 7>
+  Added missing heavy atom: .R<THR 1083>.A<OG1 11>
+  Added missing heavy atom: .R<LYS 1085>.A<CG 8>
+  Added missing heavy atom: .R<LYS 1085>.A<CD 11>
+  Added missing heavy atom: .R<LYS 1085>.A<CE 14>
+  Added missing heavy atom: .R<LYS 1085>.A<NZ 17>
+  Added missing heavy atom: .R<GLU 1088>.A<CG 8>
+  Added missing heavy atom: .R<GLU 1088>.A<CD 11>
+  Added missing heavy atom: .R<GLU 1088>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 1088>.A<OE2 13>
+  Added missing heavy atom: .R<ILE 1090>.A<CG2 7>
+  Added missing heavy atom: .R<ILE 1090>.A<CG1 11>
+  Added missing heavy atom: .R<ILE 1090>.A<CD1 14>
+  Added missing heavy atom: .R<PHE 1106>.A<CG 8>
+  Added missing heavy atom: .R<PHE 1106>.A<CD1 9>
+  Added missing heavy atom: .R<PHE 1106>.A<CD2 17>
+  Added missing heavy atom: .R<PHE 1106>.A<CE1 11>
+  Added missing heavy atom: .R<PHE 1106>.A<CE2 15>
+  Added missing heavy atom: .R<PHE 1106>.A<CZ 13>
+  Added missing heavy atom: .R<MET 1111>.A<CG 8>
+  Added missing heavy atom: .R<MET 1111>.A<SD 11>
+  Added missing heavy atom: .R<MET 1111>.A<CE 12>
+  Added missing heavy atom: .R<LYS 1132>.A<CG 8>
+  Added missing heavy atom: .R<LYS 1132>.A<CD 11>
+  Added missing heavy atom: .R<LYS 1132>.A<CE 14>
+  Added missing heavy atom: .R<LYS 1132>.A<NZ 17>
+  Added missing heavy atom: .R<LEU 1188>.A<CG 8>
+  Added missing heavy atom: .R<LEU 1188>.A<CD1 10>
+  Added missing heavy atom: .R<LEU 1188>.A<CD2 14>
+  Added missing heavy atom: .R<LYS 1214>.A<CG 8>
+  Added missing heavy atom: .R<LYS 1214>.A<CD 11>
+  Added missing heavy atom: .R<LYS 1214>.A<CE 14>
+  Added missing heavy atom: .R<LYS 1214>.A<NZ 17>
+  Added missing heavy atom: .R<GLU 1216>.A<CG 8>
+  Added missing heavy atom: .R<GLU 1216>.A<CD 11>
+  Added missing heavy atom: .R<GLU 1216>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 1216>.A<OE2 13>
+  Added missing heavy atom: .R<MET 1232>.A<CG 8>
+  Added missing heavy atom: .R<MET 1232>.A<SD 11>
+  Added missing heavy atom: .R<MET 1232>.A<CE 12>
+  Added missing heavy atom: .R<GLU 1258>.A<CG 8>
+  Added missing heavy atom: .R<GLU 1258>.A<CD 11>
+  Added missing heavy atom: .R<GLU 1258>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 1258>.A<OE2 13>
+  Added missing heavy atom: .R<ASP 1259>.A<CG 8>
+  Added missing heavy atom: .R<ASP 1259>.A<OD1 9>
+  Added missing heavy atom: .R<ASP 1259>.A<OD2 10>
+  Added missing heavy atom: .R<TYR 1262>.A<CG 8>
+  Added missing heavy atom: .R<TYR 1262>.A<CD1 9>
+  Added missing heavy atom: .R<TYR 1262>.A<CD2 18>
+  Added missing heavy atom: .R<TYR 1262>.A<CE1 11>
+  Added missing heavy atom: .R<TYR 1262>.A<CE2 16>
+  Added missing heavy atom: .R<TYR 1262>.A<CZ 13>
+  Added missing heavy atom: .R<TYR 1262>.A<OH 14>
+  Added missing heavy atom: .R<GLU 1293>.A<CG 8>
+  Added missing heavy atom: .R<GLU 1293>.A<CD 11>
+  Added missing heavy atom: .R<GLU 1293>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 1293>.A<OE2 13>
+  Added missing heavy atom: .R<CSER 1294>.A<OXT 12>
+  Added missing heavy atom: .R<CSER 1294>.A<OG 8>
+  total atoms in file: 9436
+  Leap added 10508 missing atoms according to residue templates:
+       548 Heavy
+       9960 H / lone pairs
+> savepdb abc first_with_hydrogens.pdb
+Writing pdb file: first_with_hydrogens.pdb
+
+/shared/centos7/amber/amber22/amber22/bin/teLeap: Warning!
+ Converting N-terminal residue name to PDB format: NILE -> ILE
+
+/shared/centos7/amber/amber22/amber22/bin/teLeap: Warning!
+ Converting C-terminal residue name to PDB format: CSER -> SER
+
+/shared/centos7/amber/amber22/amber22/bin/teLeap: Warning!
+ Converting N-terminal residue name to PDB format: NILE -> ILE
+
+/shared/centos7/amber/amber22/amber22/bin/teLeap: Warning!
+ Converting C-terminal residue name to PDB format: CSER -> SER
+
+/shared/centos7/amber/amber22/amber22/bin/teLeap: Warning!
+ Converting N-terminal residue name to PDB format: NILE -> ILE
+
+/shared/centos7/amber/amber22/amber22/bin/teLeap: Warning!
+ Converting C-terminal residue name to PDB format: CSER -> SER
+
+/shared/centos7/amber/amber22/amber22/bin/teLeap: Warning!
+ Converting N-terminal residue name to PDB format: NILE -> ILE
+
+/shared/centos7/amber/amber22/amber22/bin/teLeap: Warning!
+ Converting C-terminal residue name to PDB format: CSER -> SER
+> quit
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 8; Notes = 0.
+log started: Wed May 14 12:26:21 2025
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the ff19SB force field
+>> # ----- NOTE: this is designed for PDB format 3!
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "H"   "H" "sp3" }
+>> 	{ "HO"  "H" "sp3" }
+>> 	{ "HS"  "H" "sp3" }
+>> 	{ "H1"  "H" "sp3" }
+>> 	{ "H2"  "H" "sp3" }
+>> 	{ "H3"  "H" "sp3" }
+>> 	{ "H4"  "H" "sp3" }
+>> 	{ "H5"  "H" "sp3" }
+>> 	{ "HW"  "H" "sp3" }
+>> 	{ "HC"  "H" "sp3" }
+>> 	{ "HA"  "H" "sp3" }
+>> 	{ "HP"  "H" "sp3" }
+>> 	{ "HZ"  "H" "sp3" }
+>> 	{ "OH"  "O" "sp3" }
+>> 	{ "OS"  "O" "sp3" }
+>> 	{ "O"   "O" "sp2" }
+>> 	{ "O2"  "O" "sp2" }
+>> 	{ "OP"  "O" "sp2" }
+>> 	{ "OW"  "O" "sp3" }
+>> 	{ "CT"  "C" "sp3" }
+>> 	{ "CX"  "C" "sp3" }
+>> 	{ "XC"  "C" "sp3" }
+>> 	{ "C8"  "C" "sp3" }
+>> 	{ "2C"  "C" "sp3" }
+>> 	{ "3C"  "C" "sp3" }
+>> 	{ "CH"  "C" "sp3" }
+>> 	{ "CS"  "C" "sp2" }
+>> 	{ "C"   "C" "sp2" }
+>> 	{ "CO"   "C" "sp2" }
+>> 	{ "C*"  "C" "sp2" }
+>> 	{ "CA"  "C" "sp2" }
+>> 	{ "CB"  "C" "sp2" }
+>> 	{ "CC"  "C" "sp2" }
+>> 	{ "CN"  "C" "sp2" }
+>> 	{ "CM"  "C" "sp2" }
+>> 	{ "CK"  "C" "sp2" }
+>> 	{ "CQ"  "C" "sp2" }
+>> 	{ "CD"  "C" "sp2" }
+>> 	{ "C5"  "C" "sp2" }
+>> 	{ "C4"  "C" "sp2" }
+>> 	{ "CP"  "C" "sp2" }
+>> 	{ "CI"  "C" "sp3" }
+>> 	{ "CJ"  "C" "sp2" }
+>> 	{ "CW"  "C" "sp2" }
+>> 	{ "CV"  "C" "sp2" }
+>> 	{ "CR"  "C" "sp2" }
+>> 	{ "CA"  "C" "sp2" }
+>> 	{ "CY"  "C" "sp2" }
+>> 	{ "C0"  "Ca" "sp3" }
+>> 	{ "MG"  "Mg" "sp3" }
+>> 	{ "N"   "N" "sp2" }
+>> 	{ "NA"  "N" "sp2" }
+>> 	{ "N2"  "N" "sp2" }
+>> 	{ "N*"  "N" "sp2" }
+>> 	{ "NP"  "N" "sp2" }
+>> 	{ "NQ"  "N" "sp2" }
+>> 	{ "NB"  "N" "sp2" }
+>> 	{ "NC"  "N" "sp2" }
+>> 	{ "NT"  "N" "sp3" }
+>> 	{ "NY"  "N" "sp2" }
+>> 	{ "N3"  "N" "sp3" }
+>> 	{ "S"   "S" "sp3" }
+>> 	{ "SH"  "S" "sp3" }
+>> 	{ "P"   "P" "sp3" }
+>> 	{ "LP"  ""  "sp3" }
+>> 	{ "EP"  ""  "sp3" }
+>> 	{ "F"   "F" "sp3" }
+>> 	{ "Cl"  "Cl" "sp3" }
+>> 	{ "Br"  "Br" "sp3" }
+>> 	{ "I"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the main parameter set.
+>> #
+>> set default cmap on
+>> parm19 = loadamberparams parm19.dat
+Loading parameters: /shared/centos7/amber/amber22/amber22/dat/leap/parm/parm19.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA + ff19SB
+(UNKNOWN ATOM TYPE: Zn)
+(UNKNOWN ATOM TYPE: EP)
+>> frcmod19SB = loadamberparams frcmod.ff19SB
+Loading parameters: /shared/centos7/amber/amber22/amber22/dat/leap/parm/frcmod.ff19SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff19SB AA-specific backbone CMAPs for protein 07/25/2019
+>> #
+>> #	Load main chain and terminating amino acid libraries
+>> #
+>> loadOff amino19.lib
+Loading library: /shared/centos7/amber/amber22/amber22/dat/leap/lib/amino19.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: HYP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>> loadOff aminoct12.lib
+Loading library: /shared/centos7/amber/amber22/amber22/dat/leap/lib/aminoct12.lib
+Loading: CALA
+Loading: CARG
+Loading: CASN
+Loading: CASP
+Loading: CCYS
+Loading: CCYX
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CHYP
+Loading: CILE
+Loading: CLEU
+Loading: CLYS
+Loading: CMET
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>> loadOff aminont12.lib
+Loading library: /shared/centos7/amber/amber22/amber22/dat/leap/lib/aminont12.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASN
+Loading: NASP
+Loading: NCYS
+Loading: NCYX
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>> 
+>> #
+>> #	Define the PDB name map for the amino acids
+>> #
+>> addPdbResMap {
+>>   { 0 "HYP" "NHYP" } { 1 "HYP" "CHYP" }
+>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>> }
+>> 
+>> #
+>> # assume that most often proteins use HIE
+>> #
+>> NHIS = NHIE
+>> HIS = HIE
+>> CHIS = CHIE
+> 
+> source leaprc.gaff2
+----- Source: /shared/centos7/amber/amber22/amber22/dat/leap/cmd/leaprc.gaff2
+----- Source of /shared/centos7/amber/amber22/amber22/dat/leap/cmd/leaprc.gaff2 done
+>> logFile leap.log
+log started: Wed May 14 12:26:21 2025
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "op"  "O" "sp3" }
+>> 	{ "oq"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cs"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "n5"  "N" "sp3" }
+>> 	{ "n6"  "N" "sp3" }
+>> 	{ "n7"  "N" "sp3" }
+>> 	{ "n8"  "N" "sp3" }
+>> 	{ "n9"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "ni"  "N" "sp2" }
+>> 	{ "nj"  "N" "sp2" }
+>> 	{ "nk"  "N" "sp3" }
+>> 	{ "nl"  "N" "sp3" }
+>> 	{ "nm"  "N" "sp2" }
+>> 	{ "nn"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "np"  "N" "sp3" }
+>> 	{ "nq"  "N" "sp3" }
+>> 	{ "ns"  "N" "sp2" }
+>> 	{ "nt"  "N" "sp2" }
+>> 	{ "nu"  "N" "sp2" }
+>> 	{ "nv"  "N" "sp2" }
+>> 	{ "nx"  "N" "sp3" }
+>> 	{ "ny"  "N" "sp3" }
+>> 	{ "nz"  "N" "sp3" }
+>> 	{ "n+"  "N" "sp3" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "sp"   "S" "sp3" }
+>> 	{ "sq"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff2.dat
+Loading parameters: /shared/centos7/amber/amber22/amber22/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.11, May 2016)
+> 
+> source leaprc.lipid21
+----- Source: /shared/centos7/amber/amber22/amber22/dat/leap/cmd/leaprc.lipid21
+----- Source of /shared/centos7/amber/amber22/amber22/dat/leap/cmd/leaprc.lipid21 done
+>> #
+>> # Set log file
+>> #
+>> logFile leap.log
+log started: Wed May 14 12:26:21 2025
+
+Log file: ./leap.log
+>> #
+>> # leaprc for loading the Lipid21 v1.0 force field
+>> #       of Dickson, Gould and Walker.
+>> #       
+>> #       Note this file is designed to be used in addition
+>> #       to one of the standard protein force field leaprc files
+>> #       even if you are running a pure lipid.
+>> #
+>> #       For example, you would enter in leap:
+>> #         source leaprc.ff19SB
+>> #         source leaprc.lipid21
+>> #       
+>> # Load atom type hybridizations
+>> #
+>> addAtomTypes {
+>>     { "cA"  "C" "sp3" }
+>>     { "cB"  "C" "sp2" }
+>>     { "cC"  "C" "sp2" }
+>>     { "cD"  "C" "sp3" }
+>>     { "hA"  "H" "sp3" }
+>>     { "hB"  "H" "sp3" }
+>>     { "hE"  "H" "sp3" }
+>>     { "hL"  "H" "sp3" }
+>>     { "hN"  "H" "sp3" }
+>>     { "hO"  "H" "sp3" }
+>>     { "hX"  "H" "sp3" }
+>>     { "nA"  "N" "sp3" }
+>>     { "nN"  "N" "sp2" }
+>>     { "oC"  "O" "sp2" }
+>>     { "oH"  "O" "sp3" }
+>>     { "oO"  "O" "sp2" }
+>>     { "oP"  "O" "sp2" }
+>>     { "oS"  "O" "sp3" }
+>>     { "oT"  "O" "sp3" }
+>>     { "pA"  "P" "sp3" }
+>> }
+>> #
+>> # Load the Lipid21 parameter set.
+>> #
+>> lipid21 = loadamberparams lipid21.dat 
+Loading parameters: /shared/centos7/amber/amber22/amber22/dat/leap/parm/lipid21.dat
+Reading title:
+AMBER Lipid21 v1.0 C. J. Dickson, R.C. Walker, I.R. Gould.
+>> #
+>> # Load the Lipid21 master lib file.
+>> #
+>> loadoff lipid21.lib
+Loading library: /shared/centos7/amber/amber22/amber22/dat/leap/lib/lipid21.lib
+Loading: AR
+Loading: CHL
+Loading: DHA
+Loading: LAL
+Loading: MY
+Loading: OL
+Loading: PA
+Loading: PC
+Loading: PE
+Loading: PGR
+Loading: PGS
+Loading: PH-
+Loading: PS
+Loading: SA
+Loading: SPM
+Loading: ST
+>> 
+> 
+> source leaprc.water.tip3p
+----- Source: /shared/centos7/amber/amber22/amber22/dat/leap/cmd/leaprc.water.tip3p
+----- Source of /shared/centos7/amber/amber22/amber22/dat/leap/cmd/leaprc.water.tip3p done
+>> #
+>> #       Load water and ions for TIP3P + Li/Merz monovalent ions 
+>> #       + Joung-Chetham monovalent ions
+>> #       + Li/Merz highly charged ions (+2 to +4, 12-6 normal usage set)
+>> #
+>> #       Note: the Li/Merz monovalent set is loaded only to get Tl+,
+>> #          Cu+, Ag+ NH4+, H3O+.  Since we load Joung-Cheatham second,
+>> #          the alkali halide parameters come from the Joung-Cheatham set
+>> #
+>> addAtomTypes {
+>> 	{ "HW"  "H" "sp3" }
+>> 	{ "OW"  "O" "sp3" }
+>> 	{ "F-"   "F" "sp3" }
+>> 	{ "Cl-"  "Cl" "sp3" }
+>> 	{ "Br-"  "Br" "sp3" }
+>> 	{ "I-"   "I"  "sp3" }
+>> 	{ "Li+"  "Li"  "sp3" }
+>> 	{ "Na+"  "Na"  "sp3" }
+>> 	{ "K+"  "K"  "sp3" }
+>> 	{ "Rb+"  "Rb"  "sp3" }
+>> 	{ "Cs+"  "Cs"  "sp3" }
+>> 	{ "Mg+"  "Mg"  "sp3" }
+>>     { "Tl+"  "Tl"  "sp3" }
+>>     { "Cu+"  "Cu"  "sp3" }
+>>     { "Ag+"  "Ag"  "sp3" }
+>>     { "NH4+"  "N"  "sp3" }
+>>     { "H3O+"  "O"  "sp3" }
+>>     { "Be2+" "Be"  "sp3" }
+>>     { "Cu2+" "Cu"  "sp3" }
+>>     { "Ni2+" "Ni"  "sp3" }
+>>     { "Pt2+" "Pt"  "sp3" }
+>>     { "Zn2+" "Zn"  "sp3" }
+>>     { "Co2+" "Co"  "sp3" }
+>>     { "Pd2+" "Pd"  "sp3" }
+>>     { "Ag2+" "Ag"  "sp3" }
+>>     { "Cr2+" "Cr"  "sp3" }
+>>     { "Fe2+" "Fe"  "sp3" }
+>>     { "Mg2+" "Mg"  "sp3" }
+>>     { "V2+"  "V"   "sp3" }
+>>     { "Mn2+" "Mn"  "sp3" }
+>>     { "Hg2+" "Hg"  "sp3" }
+>>     { "Cd2+" "Cd"  "sp3" }
+>>     { "Yb2+" "Yb"  "sp3" }
+>>     { "Ca2+" "Ca"  "sp3" }
+>>     { "Sn2+" "Sn"  "sp3" }
+>>     { "Pb2+" "Pb"  "sp3" }
+>>     { "Eu2+" "Eu"  "sp3" }
+>>     { "Sr2+" "Sr"  "sp3" }
+>>     { "Sm2+" "Sm"  "sp3" }
+>>     { "Ba2+" "Ba"  "sp3" }
+>>     { "Ra2+" "Ra"  "sp3" }
+>>     { "Al3+" "Al"  "sp3" }
+>>     { "Fe3+" "Fe"  "sp3" }
+>>     { "Cr3+" "Cr"  "sp3" }
+>>     { "In3+" "In"  "sp3" }
+>>     { "Tl3+" "Tl"  "sp3" }
+>>     { "Y3+"  "Y"   "sp3" }
+>>     { "La3+" "La"  "sp3" }
+>>     { "Ce3+" "Ce"  "sp3" }
+>>     { "Pr3+" "Pr"  "sp3" }
+>>     { "Nd3+" "Nd"  "sp3" }
+>>     { "Sm3+" "Sm"  "sp3" }
+>>     { "Eu3+" "Eu"  "sp3" }
+>>     { "Gd3+" "Gd"  "sp3" }
+>>     { "Tb3+" "Tb"  "sp3" }
+>>     { "Dy3+" "Dy"  "sp3" }
+>>     { "Er3+" "Er"  "sp3" }
+>>     { "Tm3+" "Tm"  "sp3" }
+>>     { "Lu3+" "Lu"  "sp3" }
+>>     { "Hf4+" "Hf"  "sp3" }
+>>     { "Zr4+" "Zr"  "sp3" }
+>>     { "Ce4+" "Ce"  "sp3" }
+>>     { "U4+"  "U"   "sp3" }
+>>     { "Pu4+" "Pu"  "sp3" }
+>>     { "Th4+" "Th"  "sp3" }
+>> }
+>> loadOff atomic_ions.lib
+Loading library: /shared/centos7/amber/amber22/amber22/dat/leap/lib/atomic_ions.lib
+Loading: AG
+Loading: AL
+Loading: Ag
+Loading: BA
+Loading: BR
+Loading: Be
+Loading: CA
+Loading: CD
+Loading: CE
+Loading: CL
+Loading: CO
+Loading: CR
+Loading: CS
+Loading: CU
+Loading: CU1
+Loading: Ce
+Loading: Cl-
+Loading: Cr
+Loading: Dy
+Loading: EU
+Loading: EU3
+Loading: Er
+Loading: F
+Loading: FE
+Loading: FE2
+Loading: GD3
+Loading: H3O+
+Loading: HE+
+Loading: HG
+Loading: HZ+
+Loading: Hf
+Loading: IN
+Loading: IOD
+Loading: K
+Loading: K+
+Loading: LA
+Loading: LI
+Loading: LU
+Loading: MG
+Loading: MN
+Loading: NA
+Loading: NH4
+Loading: NI
+Loading: Na+
+Loading: Nd
+Loading: PB
+Loading: PD
+Loading: PR
+Loading: PT
+Loading: Pu
+Loading: RB
+Loading: Ra
+Loading: SM
+Loading: SR
+Loading: Sm
+Loading: Sn
+Loading: TB
+Loading: TL
+Loading: Th
+Loading: Tl
+Loading: Tm
+Loading: U4+
+Loading: V2+
+Loading: Y
+Loading: YB2
+Loading: ZN
+Loading: Zr
+>> loadOff solvents.lib
+Loading library: /shared/centos7/amber/amber22/amber22/dat/leap/lib/solvents.lib
+Loading: CHCL3BOX
+Loading: DC4
+Loading: FB3
+Loading: FB3BOX
+Loading: FB4
+Loading: FB4BOX
+Loading: MEOHBOX
+Loading: NMABOX
+Loading: O3P
+Loading: OP3
+Loading: OPC
+Loading: OPC3BOX
+Loading: OPCBOX
+Loading: PL3
+Loading: POL3BOX
+Loading: QSPCFWBOX
+Loading: SPC
+Loading: SPCBOX
+Loading: SPCFWBOX
+Loading: SPF
+Loading: SPG
+Loading: T4E
+Loading: TIP3PBOX
+Loading: TIP3PFBOX
+Loading: TIP4PBOX
+Loading: TIP4PEWBOX
+Loading: TIP5PBOX
+Loading: TP3
+Loading: TP4
+Loading: TP5
+Loading: TPF
+>> HOH = TP3
+>> WAT = TP3
+>> loadAmberParams frcmod.tip3p
+Loading parameters: /shared/centos7/amber/amber22/amber22/dat/leap/parm/frcmod.tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for TIP3P water
+>> loadAmberParams frcmod.ions1lm_126_tip3p
+Loading parameters: /shared/centos7/amber/amber22/amber22/dat/leap/parm/frcmod.ions1lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of monovalent ions for TIP3P water model (12-6 normal usage set)
+>> loadAmberParams frcmod.ionsjc_tip3p
+Loading parameters: /shared/centos7/amber/amber22/amber22/dat/leap/parm/frcmod.ionsjc_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP3P water from Joung & Cheatham JPCB (2008)
+>> loadAmberParams frcmod.ions234lm_126_tip3p
+Loading parameters: /shared/centos7/amber/amber22/amber22/dat/leap/parm/frcmod.ions234lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for TIP3P water model (12-6 normal usage set)
+>> 
+> 
+> loadamberparams frcmod.ionsjc_tip3p
+Loading parameters: /shared/centos7/amber/amber22/amber22/dat/leap/parm/frcmod.ionsjc_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP3P water from Joung & Cheatham JPCB (2008)
+> 
+> # Step 2: Load renamed CYX PDB
+> mol = loadpdb first_with_hydrogens_cyx.pdb
+Loading PDB file: ./first_with_hydrogens_cyx.pdb
+Matching PDB residue names to LEaP variables.
+Mapped residue ILE, term: Terminal/beginning, seq. number: 0 to: NILE.
+Mapped residue SER, term: Terminal/last, seq. number: 309 to: CSER.
+Mapped residue ILE, term: Terminal/beginning, seq. number: 310 to: NILE.
+Mapped residue SER, term: Terminal/last, seq. number: 619 to: CSER.
+Mapped residue ILE, term: Terminal/beginning, seq. number: 620 to: NILE.
+Mapped residue SER, term: Terminal/last, seq. number: 929 to: CSER.
+Mapped residue ILE, term: Terminal/beginning, seq. number: 930 to: NILE.
+Mapped residue SER, term: Terminal/last, seq. number: 1239 to: CSER.
+  total atoms in file: 19938
+> 
+> # Step 3: Add disulfide bonds
+> bond mol.380.SG mol.412.SG
+> bond mol.690.SG mol.722.SG
+> bond mol.1000.SG mol.1032.SG
+> 
+> # Step 4: Add ions and solvate
+> addions mol K+ 0
+40 K+ ions required to neutralize.
+Adding 40 counter ions to "mol" using 1A grid
+Total solute charge:  -40.00  Max atom radius:   1.98
+Grid extends from solute vdw + 5.88  to  11.86
+Box:
+   enclosing:  113.07 113.42 101.22   217.47 216.64 251.20
+   sized:			      369.07 369.42 357.22
+   edge:        256.00
+Resolution:      1.00 Angstrom.
+Tree depth: 8
+Volume =  1.30% of box, grid points 217876
+ (no solvent present)
+Calculating grid charges
+Placed K+ in mol at (170.07, 169.42, 118.22).
+Placed K+ in mol at (160.07, 158.42, 119.22).
+Placed K+ in mol at (175.07, 163.42, 232.22).
+Placed K+ in mol at (161.07, 178.42, 236.22).
+Placed K+ in mol at (161.07, 175.42, 106.22).
+Placed K+ in mol at (175.07, 121.42, 195.22).
+Placed K+ in mol at (151.07, 159.42, 237.22).
+Placed K+ in mol at (122.07, 159.42, 200.22).
+Placed K+ in mol at (170.07, 157.42, 114.22).
+Placed K+ in mol at (203.07, 174.42, 185.22).
+Placed K+ in mol at (166.07, 167.42, 179.22).
+Placed K+ in mol at (165.07, 150.42, 241.22).
+Placed K+ in mol at (184.07, 169.42, 224.22).
+Placed K+ in mol at (155.07, 207.42, 190.22).
+Placed K+ in mol at (121.07, 155.42, 189.22).
+Placed K+ in mol at (172.07, 138.42, 113.22).
+Placed K+ in mol at (163.07, 180.42, 223.22).
+Placed K+ in mol at (161.07, 169.42, 119.22).
+Placed K+ in mol at (209.07, 169.42, 195.22).
+Placed K+ in mol at (150.07, 163.42, 223.22).
+Placed K+ in mol at (137.07, 160.42, 114.22).
+Placed K+ in mol at (180.07, 173.42, 111.22).
+Placed K+ in mol at (178.07, 124.42, 186.22).
+Placed K+ in mol at (141.07, 207.42, 194.22).
+Placed K+ in mol at (162.07, 193.42, 114.22).
+Placed K+ in mol at (167.07, 149.42, 223.22).
+Placed K+ in mol at (174.07, 176.42, 235.22).
+Placed K+ in mol at (125.07, 162.42, 216.22).
+Placed K+ in mol at (209.07, 182.42, 188.22).
+Placed K+ in mol at (171.07, 124.42, 209.22).
+Placed K+ in mol at (191.07, 158.42, 114.22).
+Placed K+ in mol at (176.07, 206.42, 201.22).
+Placed K+ in mol at (208.07, 165.42, 212.22).
+Placed K+ in mol at (153.07, 157.42, 111.22).
+Placed K+ in mol at (152.07, 148.42, 238.22).
+Placed K+ in mol at (152.07, 169.42, 177.22).
+Placed K+ in mol at (159.07, 132.42, 136.22).
+Placed K+ in mol at (152.07, 173.42, 239.22).
+Placed K+ in mol at (126.07, 148.42, 185.22).
+Placed K+ in mol at (189.07, 123.42, 197.22).
+
+Done adding ions.
+> addions mol Cl- 0
+
+/shared/centos7/amber/amber22/amber22/bin/teLeap: Warning!
+addIons: 1st Ion & target unit have charges of the same sign:
+     unit charge = -5.32907e-13; ion1 charge = -1;
+     can't neutralize.
+> solvatebox mol TIP3PBOX 10.0
+  Solute vdw bounding box:              91.410 89.410 138.410
+  Total bounding box for atom centers:  111.410 109.410 158.410
+  Solvent unit box:                     18.774 18.774 18.774
+The number of boxes:  x= 6  y= 6  z= 9
+  Total vdw box size:                   114.644 112.646 161.643 angstroms.
+  Volume: 2087482.363 A^3 
+  Total mass 1080544.320 amu,  Density 0.860 g/cc
+  Added 52023 residues.
+> 
+> # Step 5: Save output
+> savepdb mol amber_input/with_water.pdb
+Writing pdb file: amber_input/with_water.pdb
+   printing CRYST1 record to PDB file with box info
+
+/shared/centos7/amber/amber22/amber22/bin/teLeap: Warning!
+ Converting N-terminal residue name to PDB format: NILE -> ILE
+
+/shared/centos7/amber/amber22/amber22/bin/teLeap: Warning!
+ Converting C-terminal residue name to PDB format: CSER -> SER
+
+/shared/centos7/amber/amber22/amber22/bin/teLeap: Warning!
+ Converting N-terminal residue name to PDB format: NILE -> ILE
+
+/shared/centos7/amber/amber22/amber22/bin/teLeap: Warning!
+ Converting C-terminal residue name to PDB format: CSER -> SER
+
+/shared/centos7/amber/amber22/amber22/bin/teLeap: Warning!
+ Converting N-terminal residue name to PDB format: NILE -> ILE
+
+/shared/centos7/amber/amber22/amber22/bin/teLeap: Warning!
+ Converting C-terminal residue name to PDB format: CSER -> SER
+
+/shared/centos7/amber/amber22/amber22/bin/teLeap: Warning!
+ Converting N-terminal residue name to PDB format: NILE -> ILE
+
+/shared/centos7/amber/amber22/amber22/bin/teLeap: Warning!
+ Converting C-terminal residue name to PDB format: CSER -> SER
+> saveamberparm mol amber_input/com.prmtop amber_input/com.inpcrd
+Checking Unit.
+
+/shared/centos7/amber/amber22/amber22/bin/teLeap: Warning!
+There is a bond of 22.371 angstroms between C and N atoms:
+-------  .R<ASN 12>.A<C 13> and .R<ARG 13>.A<N 1>
+
+/shared/centos7/amber/amber22/amber22/bin/teLeap: Warning!
+There is a bond of 17.704 angstroms between C and N atoms:
+-------  .R<SER 132>.A<C 10> and .R<THR 133>.A<N 1>
+
+/shared/centos7/amber/amber22/amber22/bin/teLeap: Warning!
+There is a bond of 21.544 angstroms between C and N atoms:
+-------  .R<ASN 322>.A<C 13> and .R<ARG 323>.A<N 1>
+
+/shared/centos7/amber/amber22/amber22/bin/teLeap: Warning!
+There is a bond of 17.877 angstroms between C and N atoms:
+-------  .R<SER 442>.A<C 10> and .R<THR 443>.A<N 1>
+
+/shared/centos7/amber/amber22/amber22/bin/teLeap: Warning!
+There is a bond of 22.910 angstroms between C and N atoms:
+-------  .R<ASN 632>.A<C 13> and .R<ARG 633>.A<N 1>
+
+/shared/centos7/amber/amber22/amber22/bin/teLeap: Warning!
+There is a bond of 17.842 angstroms between C and N atoms:
+-------  .R<SER 752>.A<C 10> and .R<THR 753>.A<N 1>
+
+/shared/centos7/amber/amber22/amber22/bin/teLeap: Warning!
+There is a bond of 22.290 angstroms between C and N atoms:
+-------  .R<ASN 942>.A<C 13> and .R<ARG 943>.A<N 1>
+
+/shared/centos7/amber/amber22/amber22/bin/teLeap: Warning!
+There is a bond of 17.929 angstroms between C and N atoms:
+-------  .R<SER 1062>.A<C 10> and .R<THR 1063>.A<N 1>
+
+/shared/centos7/amber/amber22/amber22/bin/teLeap: Note.
+Ignoring the warnings from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 4072 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	CSER	4
+	NILE	4
+	WAT	52023
+  )
+ (no restraints)
+> quit
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 17; Notes = 1.
