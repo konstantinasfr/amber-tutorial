@@ -143,7 +143,7 @@ zoom bridge1_sg, 8
   <img src="./disulfide_bridge.png" alt="Disulfide bridge between CYX residues" width="400"/>
 </p>
 
-This covalent bond (colored red in this representation) connects the sulfur atoms (`SG`) of the two CYX residues that originally were annotated as `CYS` in the PDB file.
+This covalent bond (colored yellow in this representation) connects the sulfur atoms (`SG`) of the two CYX residues that originally were annotated as `CYS` in the PDB file.
 
 This ensures that the structural integrity of the protein is preserved during simulation.
 
