@@ -131,6 +131,14 @@ Once completed, you’ll be ready to start **energy minimization** using these A
 
 Below is a snapshot of the disulfide bridge formed between two `CYX` residues in the GIRK2 channel, as rendered in PyMOL using the final solvated structure (`with_water.pdb`) produced by the preparation script:
 
+```
+select bridge1_sg, (resi 380+412)
+show sticks, bridge1_sg
+color yellow, bridge1_sg
+hide everything, solvent
+zoom bridge1_sg, 8
+```
+
 <p align="center">
   <img src="./disulfide_bridge.png" alt="Disulfide bridge between CYX residues" width="400"/>
 </p>
