@@ -25,8 +25,6 @@ Once the structure is loaded, perform the following checks and edits.
 
 5) Spot the missing loops. 
 
-6) Replace cryoEM headgroup PIP₂ with full-length PIP
-
 ---
 
 ### **1. Decide Whether to Keep the Waters**
@@ -83,10 +81,9 @@ If you do not want these:
 1. Open **Mutate Residues**  
 2. Select chain + residue  
 3. Choose the correct wild-type residue  
-4. Select a rotamer  
-5. Apply
+4. Apply
 
-Example: revert **141.D → Gln**.
+Example: revert **S181.A → Pro**.
 
 ---
 
@@ -106,30 +103,7 @@ Maestro will rebuild all missing segments.
 
 ---
 
-### **6. Replace Cryo-EM PIP₂ Headgroups with Full-Length PIP₂**
-
-Cryo-EM typically captures only the PIP₂ headgroup.  
-Simulations require **full-length PIP₂ with tails**.
-
-#### **Method: Manual Superposition**
-
-1. Save each Cryo-EM PIP headgroup as a PDB  
-2. Import a full-length PIP₂ structure  
-3. Select PIP₂ + protein  
-4. Open **Superimpose**  
-   - Reference: protein  
-   - Method: **Atom pairs**  
-5. Manually define headgroup atom pairs  
-6. Merge the aligned structures  
-7. Delete the Cryo-EM headgroup (PIO)  
-8. Repeat for each subunit
-
-**Important:**  
-Ensure PIP₂ tails point toward the membrane.
-
----
-
-### **7. Save the Final Cleaned Structures**
+### ** Save the Final Cleaned Structures**
 
 You need two PDB files:
 
@@ -145,8 +119,8 @@ Export using:
 
 Examples:
 
-- `protein_only.pdb`
-- `protein_with_full_pip2.pdb`
+- `G12_S181P_S170P.pdb`
+- `G12_S181P_S170P_proteinonly.pdb`
 
 ---
 
@@ -157,9 +131,7 @@ At the end of this step, you should have:
 - Clean Cryo-EM structure  
 - Correct ions kept  
 - Mutations fixed  
-- Missing loops rebuilt  
-- Full-length PIP₂ molecules placed  
-- Protein-only PDB for H++  
-- Full system PDB for membrane setup
+- Missing loops rebuilt 
+- Protein-only PDB for H++
 
 Next step: **Protonation and pKa Assignment (H++ Server)**.
