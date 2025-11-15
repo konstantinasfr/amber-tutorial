@@ -9,7 +9,7 @@ This section describes the full procedure for preparing the initial structure be
 Begin by downloading the appropriate Cryo-EM structure (PDB file) of your protein.  
 Load the downloaded PDB into Maestro or your preferred molecular editing tool.
 ![Cryo-EM structure in Maestro](screenshot/step1:system_preparation/cryoem_maestro.png)
-*Cryo-EM structure in Maestro*
+                              *Cryo-EM structure in Maestro*
 
 ---
 
@@ -39,6 +39,7 @@ You can view or remove waters in Maestro under:
 **Solvents → Waters → HOH**
 
 ![Waters in Hierarchy menu in Maestro](screenshot/step1:system_preparation/h20.png)
+
 *Waters in Hierarchy menu in Maestro*
 
 Water will be re-added later in AMBER anyway.
@@ -57,6 +58,7 @@ In Maestro:
 - Delete Na⁺, Mg²⁺, and all others unless required
 
 ![Ions in Hierarchy menu in Maestro](screenshot/step1:system_preparation/ions.png)
+
 *Ions in Hierarchy menu in Maestro*
 
 ---
@@ -79,6 +81,7 @@ For GIRK channels:
 - Keep PIP headgroups temporarily
 
 ![Ligands in Hierarchy menu in Maestro](screenshot/step1:system_preparation/PIO_CLR.png)
+
 *Ligands in Hierarchy menu in Maestro*
 
 ---
@@ -96,7 +99,8 @@ If you do not want these:
 Example: revert **S181.A → Pro**.
 
 ![Mutation menu in Maestro, we mutate S181 in chain A to proline](screenshot/step1:system_preparation/mutation.png)
-*Mutation menu in Maestro, we mutate S181 in chain A to proline*
+
+                     *Mutation menu in Maestro, we mutate S181 in chain A to proline*
 
 ---
 
@@ -115,6 +119,7 @@ To rebuild loops:
 Maestro will rebuild all missing segments.
 
 ![Protein after adding missing loops](screenshot/step1:system_preparation/fasta.png)
+
 *Protein after adding missing loops, ribbons appear connected*
 
 ---
