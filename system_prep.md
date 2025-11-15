@@ -8,7 +8,7 @@ This section describes the full procedure for preparing the initial structure be
 
 Begin by downloading the appropriate Cryo-EM structure (PDB file) of your protein.  
 Load the downloaded PDB into Maestro or your preferred molecular editing tool.
-![Cryo-EM structure in Maestro](screenshot/cryoem_maestro.png)
+![Cryo-EM structure in Maestro](screenshot/step1:system_preparation/cryoem_maestro.png)
 
 
 ---
