@@ -38,6 +38,7 @@ You can view or remove waters in Maestro under:
 
 **Solvents → Waters → HOH**
 
+![Waters in Hierarchy menu in Maestro](screenshot/step1:system_preparation/h20.png)
 
 Water will be re-added later in AMBER anyway.
 
