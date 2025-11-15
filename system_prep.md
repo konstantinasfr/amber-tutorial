@@ -38,7 +38,7 @@ You can view or remove waters in Maestro under:
 
 **Solvents → Waters → HOH**
 
-![Waters in Hierarchy menu in Maestro](screenshot/step1:system_preparation/h20.png)
+![Waters in Hierarchy menu in Maestro](screenshot/step1:system_preparation/h20.png)<br>
 *Waters in Hierarchy menu in Maestro*
 
 Water will be re-added later in AMBER anyway.
@@ -56,8 +56,7 @@ In Maestro:
 - Keep K⁺ ions (e.g., K1, K2, K3)
 - Delete Na⁺, Mg²⁺, and all others unless required
 
-![Ions in Hierarchy menu in Maestro](screenshot/step1:system_preparation/ions.png)
-
+![Ions in Hierarchy menu in Maestro](screenshot/step1:system_preparation/ions.png)<br>
 *Ions in Hierarchy menu in Maestro*
 
 ---
@@ -79,8 +78,7 @@ For GIRK channels:
 - Delete cholesterol  
 - Keep PIP headgroups temporarily
 
-![Ligands in Hierarchy menu in Maestro](screenshot/step1:system_preparation/PIO_CLR.png)
-
+![Ligands in Hierarchy menu in Maestro](screenshot/step1:system_preparation/PIO_CLR.png)<br>
 *Ligands in Hierarchy menu in Maestro*
 
 ---
@@ -97,9 +95,8 @@ If you do not want these:
 
 Example: revert **S181.A → Pro**.
 
-![Mutation menu in Maestro, we mutate S181 in chain A to proline](screenshot/step1:system_preparation/mutation.png)
-
-                     *Mutation menu in Maestro, we mutate S181 in chain A to proline*
+![Mutation menu in Maestro, we mutate S181 in chain A to proline](screenshot/step1:system_preparation/mutation.png)<br>
+*Mutation menu in Maestro, we mutate S181 in chain A to proline*
 
 ---
 
@@ -117,8 +114,7 @@ To rebuild loops:
 
 Maestro will rebuild all missing segments.
 
-![Protein after adding missing loops](screenshot/step1:system_preparation/fasta.png)
-
+![Protein after adding missing loops](screenshot/step1:system_preparation/fasta.png)<br>
 *Protein after adding missing loops, ribbons appear connected*
 
 ---
@@ -130,7 +126,7 @@ You need two PDB files:
 #### **1. Protein-only PDB**
 Required for H++, because it cannot process lipids or ligands.
 
-![Protein after we deletd all lipids and ions](screenshot/step1:system_preparation/proteinonly.png)
+![Protein after we deletd all lipids and ions](screenshot/step1:system_preparation/proteinonly.png)<br>
 *Protein after we deletd all lipids and ions*
 
 #### **2. Full system PDB (protein + full PIP₂ + future ligands)**
