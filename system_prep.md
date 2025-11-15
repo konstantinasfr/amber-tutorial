@@ -9,7 +9,7 @@ This section describes the full procedure for preparing the initial structure be
 Begin by downloading the appropriate Cryo-EM structure (PDB file) of your protein.  
 Load the downloaded PDB into Maestro or your preferred molecular editing tool.
 ![Cryo-EM structure in Maestro](screenshot/step1:system_preparation/cryoem_maestro.png)
-                              *Cryo-EM structure in Maestro*
+*Cryo-EM structure in Maestro*
 
 ---
 
@@ -39,7 +39,6 @@ You can view or remove waters in Maestro under:
 **Solvents → Waters → HOH**
 
 ![Waters in Hierarchy menu in Maestro](screenshot/step1:system_preparation/h20.png)
-
 *Waters in Hierarchy menu in Maestro*
 
 Water will be re-added later in AMBER anyway.
