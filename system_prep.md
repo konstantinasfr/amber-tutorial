@@ -55,6 +55,8 @@ In Maestro:
 - Keep K⁺ ions (e.g., K1, K2, K3)
 - Delete Na⁺, Mg²⁺, and all others unless required
 
+![Ions in Hierarchy menu in Maestro](screenshot/step1:system_preparation/ions.png)
+
 ---
 
 ### **3. Decide Whether to Keep Ligands**
@@ -74,6 +76,8 @@ For GIRK channels:
 - Delete cholesterol  
 - Keep PIP headgroups temporarily
 
+![Ligands in Hierarchy menu in Maestro](screenshot/step1:system_preparation/PIO_CLR.png)
+
 ---
 
 ### **4. Check for Mutations**
@@ -87,6 +91,8 @@ If you do not want these:
 4. Apply
 
 Example: revert **S181.A → Pro**.
+
+![Mutation menu in Maestro, we mutate S181 in chain A to proline](screenshot/step1:system_preparation/mutation.png)
 
 ---
 
