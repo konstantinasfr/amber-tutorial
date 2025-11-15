@@ -15,6 +15,18 @@ Load the downloaded PDB into Maestro or your preferred molecular editing tool.
 
 Once the structure is loaded, perform the following checks and edits.
 
+1) Decide if we want to keep the water or not. 
+
+2) Decide what ions we need to keep. 
+
+3) Decide if we need ligand. 
+
+4) Check for mutations. 
+
+5) Spot the missing loops. 
+
+6) Replace cryoEM headgroup PIP₂ with full-length PIP
+
 ---
 
 ### **1. Decide Whether to Keep the Waters**
