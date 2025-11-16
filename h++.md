@@ -15,12 +15,15 @@ H++ requires:
 
 ### **1A. Remove CONECT Records**
 
-We open *pdb4amber_G12_S181P_S170P_proteinonly.pdb* 
-At the end of the PDB, delete all lines beginning with:
+We open *pdb4amber_G12_S181P_S170P_proteinonly.pdb*. 
+At the end of the PDB, delete all lines beginning with CONNECT
+
+![connect at the end of the pdb](screenshot/step2:h++/connect.png) <br>
+* End of pdb4amber_G12_S181P_S170P_proteinonly.pdb*
 
 
 These cause errors in H++.
-We rename the file to pdb4amber_G12_S181P_S170P_proteinonly_nocon.pdb
+We rename the file to *pdb4amber_G12_S181P_S170P_proteinonly_nocon.pdb*
 
 ---
 
