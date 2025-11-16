@@ -15,7 +15,7 @@ H++ requires:
 
 ### **1A. Remove CONECT Records**
 
-We open pdb4amber_G12_S181P_S170P_proteinonly.pdb
+We open *pdb4amber_G12_S181P_S170P_proteinonly.pdb* 
 At the end of the PDB, delete all lines beginning with:
 
 
