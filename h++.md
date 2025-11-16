@@ -15,10 +15,12 @@ H++ requires:
 
 ### **1A. Remove CONECT Records**
 
+We open pdb4amber_G12_S181P_S170P_proteinonly.pdb
 At the end of the PDB, delete all lines beginning with:
 
 
 These cause errors in H++.
+We rename the file to pdb4amber_G12_S181P_S170P_proteinonly_nocon.pdb
 
 ---
 
@@ -27,7 +29,7 @@ These cause errors in H++.
 Use `pdb4amber` to sanitize atom names, remove hydrogens, and ensure compatibility:
 
 ```
-pdb4amber -i GIRK12_E141Q_PIP2full_prepared.pdb -o GIRK12_clean4hpp.pdb --nohyd
+pdb4amber -i ./input/G12_S181P_S170P_proteinonly.pdb -o ./output/pdb4amber_G12_S181P_S170P_proteinonly.pdb --nohyd
 ```
 
 
@@ -40,10 +42,7 @@ This produces a clean file that can be safely processed by H++.
 Upload `GIRK12_clean4hpp.pdb` to the H++ server and set:
 
 - **pH = 7.4**  
-- **Salinity = 0.15**  
-- **Internal dielectric = 10**  
-- **External dielectric = 80**  
-- Enable: *Correct orientation of ASN, GLN, and HIS groups, add H atoms, and assign HIS H atoms to δ or ε based on contacts*
+- Disable: *Correct orientation of ASN, GLN, and HIS groups, add H atoms, and assign HIS H atoms to δ or ε based on contacts*
 
 H++ will read:
 
@@ -74,7 +73,85 @@ Download:
 These are usually named like:
 
 ```
-0.15_80_10_pH7.4_GIRK12_clean4hpp.result.pdb
-0.15_80_10_pH7.4_GIRK12_clean4hpp.top
-0.15_80_10_pH7.4_GIRK12_clean4hpp.crd
+0.15_80_10_pH7.4_pdb4amber_G12_S181P_S170P_proteinonly_nocon.crd.result.pdb
+0.15_80_10_pH7.4_pdb4amber_G12_S181P_S170P_proteinonly_nocon.crd.top
+0.15_80_10_pH7.4_pdb4amber_G12_S181P_S170P_proteinonly_nocon.crd.crd
 ```
+
+---
+
+## 5. Convert Topology + Coordinates Back to a PDB
+
+Use `ambpdb` to generate a PDB with all hydrogens added by H++:
+
+```
+ambpdb -c 0.15_80_10_pH7.4_pdb4amber_G12_S181P_S170P_proteinonly_nocon.crd -p 0.15_80_10_pH7.4_pdb4amber_G12_S181P_S170P_proteinonly_nocon.top >0.15_80_10_pH7.4_pdb4amber_G12_S181P_S170P_proteinonly_nocon.pdb
+```
+
+This is the protonated protein structure.
+
+---
+
+## 6. Inspect Protonation States in VMD
+
+Open the new PDB in VMD:
+```
+vmd 0.15_80_10_pH7.4_pdb4amber_G12_S181P_S170P_proteinonly_nocon.pdb
+```
+
+Check:
+- Whether protonation is consistent across **all four subunits**  
+- Histidine types: **HIE**, **HID**, **HIP**  
+- Any suspiciously protonated residues  
+- Any missing heavy atoms (should not occur if pdb4amber was used)  
+
+Example selection to highlight HIE:
+```
+resname HIE
+```
+
+Visual inspection is critical, especially around functional regions.
+
+---
+
+## 7. Merge Protonated Protein Back With the Original Full System
+
+H++ **returns only the protein**.  
+It does *not* include:
+
+- PIP₂  
+- ions  
+- ligands  
+- membrane  
+- waters  
+
+Therefore, we must **superimpose** the H++-processed protein onto the original prepared system that contains PIP₂ and any ligands/ions.
+
+Steps:
+
+1. Load both structures into Maestro (or VMD/PyMOL).  
+2. Use **Superimpose / Align** on backbone atoms (e.g., Cα).  
+3. Replace the protein coordinates in the full system with the protonated version.  
+4. Keep the original PIP₂, ions, ligand positions exactly unchanged.
+
+This gives you the final **protonated full system PDB**, ready for CHARMM-GUI or tleap.
+
+---
+
+# Summary
+
+After completing H++:
+
+- You have a protonated protein at pH 7.4  
+- Protonation states of HIS, ASN, GLN are optimized  
+- Missing hydrogens added  
+- Physically reasonable protonation based on pKa predictions  
+- Structure converted to PDB via `ambpdb`  
+- Protonated protein aligned back to the full system with PIP₂ and ions  
+
+You are now ready for:
+
+**Step 3 — Membrane System Construction (CHARMM-GUI)**
+
+
+
