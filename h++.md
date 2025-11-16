@@ -19,7 +19,7 @@ We open *pdb4amber_G12_S181P_S170P_proteinonly.pdb*.
 At the end of the PDB, delete all lines beginning with CONNECT
 
 ![connect at the end of the pdb](screenshot/step2:h++/connect.png) <br>
-* End of pdb4amber_G12_S181P_S170P_proteinonly.pdb*
+*End of pdb4amber_G12_S181P_S170P_proteinonly.pdb*
 
 
 These cause errors in H++.
