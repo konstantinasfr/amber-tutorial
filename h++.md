@@ -3,8 +3,15 @@
 H++ is used to add hydrogens, determine protonation states, flip Asn/Gln/His residues when necessary, and prepare a structure with correct ionization states at the desired pH. The H++ output will later be merged back with the protein–PIP₂–ion system.
 
 ---
+## 1. Prepare PDB Using pdb4amber
 
-## 1. Clean the Structure Before Submitting to H++
+Use `pdb4amber` to sanitize atom names, remove hydrogens, and ensure compatibility:
+
+```
+pdb4amber -i ./input/G2_S181P_proteinonly.pdb -o ./output/pdb4amber_G2_S181P_proteinonly.pdb --nohyd
+```
+
+## 2. Clean the Structure Before Submitting to H++
 
 H++ requires:
 - protein only  
@@ -13,30 +20,21 @@ H++ requires:
 - no ions  
 - no CONECT records at the end of the PDB
 
+We have already deleted ligands, PIP₂ and ions in teh previous step.
+
 ### **1A. Remove CONECT Records**
 
-We open *pdb4amber_G12_S181P_S170P_proteinonly.pdb*. 
+We open *pdb4amber_G2_S181P_proteinonly.pdb*. 
 At the end of the PDB, delete all lines beginning with CONNECT
 
 ![connect at the end of the pdb](screenshot/step2:h++/connect.png) <br>
-*End of pdb4amber_G12_S181P_S170P_proteinonly.pdb*
+*End of pdb4amber_G2_S181P_proteinonly.pdb*
 
-
-These cause errors in H++.
-We rename the file to *pdb4amber_G12_S181P_S170P_proteinonly_nocon.pdb*
+We rename the file to *pdb4amber_G2_S181P_proteinonly_nocon.pdb* to remember we deleted them
 
 ---
 
-## 2. Prepare a Clean PDB Using pdb4amber
 
-Use `pdb4amber` to sanitize atom names, remove hydrogens, and ensure compatibility:
-
-```
-pdb4amber -i ./input/G12_S181P_S170P_proteinonly.pdb -o ./output/pdb4amber_G12_S181P_S170P_proteinonly.pdb --nohyd
-```
-
-
-This produces a clean file that can be safely processed by H++.
 
 ---
 
