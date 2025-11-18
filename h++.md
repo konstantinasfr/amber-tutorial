@@ -42,7 +42,7 @@ This produces a clean file that can be safely processed by H++.
 
 ## 3. Submit the File to H++
 
-Upload `GIRK12_clean4hpp.pdb` to the H++ server and set:
+Upload `GIRK12_clean4hpp.pdb` to the H++ server and set: http://newbiophysics.cs.vt.edu/H++/
 
 - **pH = 7.4**  
 - Disable: *Correct orientation of ASN, GLN, and HIS groups, add H atoms, and assign HIS H atoms to δ or ε based on contacts*
@@ -76,9 +76,9 @@ Download:
 These are usually named like:
 
 ```
-0.15_80_10_pH7.4_pdb4amber_G12_S181P_S170P_proteinonly_nocon.crd.result.pdb
-0.15_80_10_pH7.4_pdb4amber_G12_S181P_S170P_proteinonly_nocon.crd.top
-0.15_80_10_pH7.4_pdb4amber_G12_S181P_S170P_proteinonly_nocon.crd.crd
+0.15_80_10_pH7.4_pdb4amber_G2_S181P_proteinonly_nocon.result.pdb
+0.15_80_10_pH7.4_pdb4amber_G2_S181P_proteinonly_nocon.crd.top
+0.15_80_10_pH7.4_pdb4amber_G2_S181P_proteinonly_nocon.crd.crd
 ```
 
 ---
@@ -88,7 +88,7 @@ These are usually named like:
 Use `ambpdb` to generate a PDB with all hydrogens added by H++:
 
 ```
-ambpdb -c 0.15_80_10_pH7.4_pdb4amber_G12_S181P_S170P_proteinonly_nocon.crd -p 0.15_80_10_pH7.4_pdb4amber_G12_S181P_S170P_proteinonly_nocon.top >0.15_80_10_pH7.4_pdb4amber_G12_S181P_S170P_proteinonly_nocon.pdb
+ambpdb -c 0.15_80_10_pH7.4_pdb4amber_G2_S181P_proteinonly_nocon.crd -p 0.15_80_10_pH7.4_pdb4amber_G2_S181P_proteinonly_nocon.top >0.15_80_10_pH7.4_pdb4amber_G2_S181P_proteinonly_nocon.pdb
 ```
 
 This is the protonated protein structure.
@@ -99,7 +99,7 @@ This is the protonated protein structure.
 
 Open the new PDB in VMD:
 ```
-vmd 0.15_80_10_pH7.4_pdb4amber_G12_S181P_S170P_proteinonly_nocon.pdb
+vmd 0.15_80_10_pH7.4_pdb4amber_G2_S181P_proteinonly_nocon.pdb
 ```
 
 Check:
