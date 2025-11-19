@@ -46,8 +46,6 @@ Use:
 
 This places the H++-protonated protein exactly where the preprocessed structure was located.
 
-![register](g2_figures/step4:system_assembly/proteinonly_alignemnt.png)
-
 We do this so that when we later add the PIPs and ions, the protonated protein matches their positions perfectly.
 
 ## 4C. Replace the Truncated Headgroups With Full PIP₂ Molecules
@@ -131,6 +129,8 @@ To do this:
 - Put `proteinonly.pdb` (CHARMM-GUI) above the merged entry
 - Open **Protein Structure Alignment**
 - Use **Residues** for alignment
+  
+![register](g2_figures/step4:system_assembly/proteinonly_alignemnt.png)
 
 This step is crucial because CHARMM-GUI defines the Z-axis membrane orientation
 
