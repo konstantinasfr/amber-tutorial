@@ -62,16 +62,16 @@ Scroll down to the lipid lists and choose the lipid ratios for the upper and low
 | POPE | 5 | 5 |
 | POPS | 5 | 5 |
 
-![Verifying the protein orientation and defining box dimensions](g2_figures/step3:charmmgui/sterols.png)
+![Verifying the protein orientation and defining box dimensions](g2_figures/step3:charmmgui/sterols.png)<br>
 *In Sterols we set Cholesterol to 1 and 1*
 
-![Verifying the protein orientation and defining box dimensions](g2_figures/step3:charmmgui/popc.png)
+![Verifying the protein orientation and defining box dimensions](g2_figures/step3:charmmgui/popc.png)<br>
 *In PC Lipids we set POPC to 25 and 25*
 
-![Verifying the protein orientation and defining box dimensions](g2_figures/step3:charmmgui/pope.png)
+![Verifying the protein orientation and defining box dimensions](g2_figures/step3:charmmgui/pope.png)<br>
 *In PE Lipids we set POPE to 5 and 5*
 
-![Verifying the protein orientation and defining box dimensions](g2_figures/step3:charmmgui/pops.png)
+![Verifying the protein orientation and defining box dimensions](g2_figures/step3:charmmgui/pops.png)<br>
 *In PS Lipids we set POPS to 5 and 5*
 
 When finished, click "Show the system info" to check the calculated number of lipids and the membrane surface area. 
@@ -158,7 +158,7 @@ charmmlipid2amber.py -i step5_assembly.pdb -c /home/ziyue/miniforge3/envs/Amber/
 Next we need to extract the protein and membrane into separate PDB files. We need this step because we didn't use the final protein for the membrane construction so later we will need to concatenate the correct combination of memebrane and protein.
 We open the DOPC_128.pdb file and we search for CHL. We store the last numbers of the PIP and the forst number of the lipid bilayer as we will use them in the following commands. In out case these numbers are 21152 and 21153.
 
-![Downloading the final AMBER-ready input files](g2_figures/step3:charmmgui/step6.png)
+![Downloading the final AMBER-ready input files](g2_figures/step3:charmmgui/chl.png)
 
 **To extract the protein:**
 
