@@ -122,7 +122,7 @@ This structure now fully contains everything except the membrane.
 
 ## 4F. Align the Merged Structure to the CHARMM-GUI Oriented Protein
 
-We must now place the merged complex into the correct membrane frame, provided by CHARMM-GUI.
+We must now place the merged complex into the correct membrane orientation, provided by CHARMM-GUI.
 
 To do this:
 
@@ -131,8 +131,6 @@ To do this:
 - Use **Residues** for alignment
   
 ![register](g2_figures/step4:system_assembly/proteinonly_alignemnt.png)
-
-This step is crucial because CHARMM-GUI defines the Z-axis membrane orientation
 
 ## 4G. Fix PIP Residue Numbers
 
