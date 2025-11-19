@@ -42,6 +42,7 @@ To submit a job in H++ server we first need register and then sign in.
 ## 4. Submit the File to H++
 
 Upload `GIRK12_clean4hpp.pdb` to the H++ server at: http://newbiophysics.cs.vt.edu/H++/
+
 ![register](g2_figures/step2:h++/process_structureh++.png) <br>
 
 We set:
@@ -77,6 +78,7 @@ Download:
 ```
 Sometime the H++ server seems like it is frozen while processing the pdb. If this is happening, you can see teh progress of your submission by selecting the 
 *view submissions* on side bar and selecting teh last submission.
+
 ![register](g2_figures/step2:h++/view_sub1.png) <br>
 
 ---
