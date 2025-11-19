@@ -76,7 +76,7 @@ Download:
 0.15_80_10_pH7.4_pdb4amber_G2_S181P_proteinonly_nocon.crd.top
 0.15_80_10_pH7.4_pdb4amber_G2_S181P_proteinonly_nocon.crd.crd
 ```
-Sometime the H++ server seems like it is frozen while processing the pdb. If this is happening, you can see teh progress of your submission by selecting the 
+Sometime the H++ server seems like it is frozen while processing the pdb. If this is happening, you can see the progress of your submission by selecting the 
 *view submissions* on side bar and selecting teh last submission.
 
 ![register](g2_figures/step2:h++/view_sub1.png) <br>
