@@ -127,8 +127,7 @@ After completing H++:
 - Missing hydrogens added  
 - Structure converted to PDB via `ambpdb`  
 
-You are now ready for:
-➡️ [**Step 3 — Membrane System Construction (CHARMM-GUI)**](./charmm_gui.md)
+You are now ready for: [**Step 3 — Membrane System Construction (CHARMM-GUI)**](./charmm_gui.md)
 
 
 
