@@ -128,8 +128,8 @@ After completing H++:
 - Structure converted to PDB via `ambpdb`  
 
 You are now ready for:
+➡️ [**Step 3 — Membrane System Construction (CHARMM-GUI)**](./charmm_gui.md)
 
-**Step 3 — Membrane System Construction (CHARMM-GUI)**
 
 
 
