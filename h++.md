@@ -85,7 +85,7 @@ Sometime the H++ server seems like it is frozen while processing the pdb. If thi
 
 ## 5. Convert Topology + Coordinates Back to a PDB
 
-Use `ambpdb` to generate a PDB with all hydrogens added by H++:
+We will not use the 0.15_80_10_pH7.4_pdb4amber_G2_S181P_proteinonly_nocon.result.pdb. Use `ambpdb` to generate a PDB with all hydrogens added by H++:
 
 ```
 ambpdb -c 0.15_80_10_pH7.4_pdb4amber_G2_S181P_proteinonly_nocon.crd -p 0.15_80_10_pH7.4_pdb4amber_G2_S181P_proteinonly_nocon.top >0.15_80_10_pH7.4_pdb4amber_G2_S181P_proteinonly_nocon.pdb
