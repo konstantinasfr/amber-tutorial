@@ -22,26 +22,28 @@ H++ requires:
 
 We have already deleted ligands, PIP₂ and ions in teh previous step.
 
-### **1A. Remove CONECT Records**
+### **2A. Remove CONECT Records**
 
 We open *pdb4amber_G2_S181P_proteinonly.pdb*. 
 At the end of the PDB, delete all lines beginning with CONNECT
 
-![connect at the end of the pdb](screenshot/step2:h++/connect.png) <br>
+![connect at the end of the pdb](g2_figures/step2:h++/delete_connect.png) <br>
 *End of pdb4amber_G2_S181P_proteinonly.pdb*
 
 We rename the file to *pdb4amber_G2_S181P_proteinonly_nocon.pdb* to remember we deleted them
 
 ---
+## 3. Register to H++ server
+To submit a job in H++ server we first need register and then sign in.
+![register](g2_figures/step2:h++/registerh++.png) <br>
 
 
+## 4. Submit the File to H++
 
----
+Upload `GIRK12_clean4hpp.pdb` to the H++ server at: http://newbiophysics.cs.vt.edu/H++/
+![register](g2_figures/step2:h++/process_structureh++.png) <br>
 
-## 3. Submit the File to H++
-
-Upload `GIRK12_clean4hpp.pdb` to the H++ server and set: http://newbiophysics.cs.vt.edu/H++/
-
+We set:
 - **pH = 7.4**  
 - Disable: *Correct orientation of ASN, GLN, and HIS groups, add H atoms, and assign HIS H atoms to δ or ε based on contacts*
 
@@ -53,13 +55,7 @@ H++ will read:
 - Structural warnings  
 - Protonation summary  
 
-Typical output messages include:
-- SUCCESS in determining flips, adding H atoms  
-- WARNING if the hydrogen optimization encounters steric clashes  
-- SUCCESS in computing pKa values  
-- SUCCESS in generating topology/coordinate files  
-
-If warnings appear, especially about **AMBER pol_h pre-optimization**, review your structure for steric clashes.
+![register](g2_figures/step2:h++/h++_settings.png) <br>
 
 ---
 
@@ -71,13 +67,16 @@ Download:
 - **AMBER topology file (.top)**  
 - **AMBER coordinate file (.crd)**  
 
-These are usually named like:
+![register](g2_figures/step2:h++/h++success.png) <br>
 
 ```
 0.15_80_10_pH7.4_pdb4amber_G2_S181P_proteinonly_nocon.result.pdb
 0.15_80_10_pH7.4_pdb4amber_G2_S181P_proteinonly_nocon.crd.top
 0.15_80_10_pH7.4_pdb4amber_G2_S181P_proteinonly_nocon.crd.crd
 ```
+Sometime the H++ server seems like it is frozen while processing the pdb. If this is happening, you can see teh progress of your submission by selecting the 
+*view submissions* on side bar and selecting teh last submission.
+![register](g2_figures/step2:h++/view_sub1.png) <br>
 
 ---
 
@@ -111,31 +110,9 @@ Example selection to highlight HIE:
 resname HIE
 ```
 
+![register](g2_figures/step2:h++/HIE.png) <br>
+
 Visual inspection is critical, especially around functional regions.
-
----
-
-## 7. Merge Protonated Protein Back With the Original Full System
-
-H++ **returns only the protein**.  
-It does *not* include:
-
-- PIP₂  
-- ions  
-- ligands  
-- membrane  
-- waters  
-
-Therefore, we must **superimpose** the H++-processed protein onto the original prepared system that contains PIP₂ and any ligands/ions.
-
-Steps:
-
-1. Load both structures into Maestro (or VMD/PyMOL).  
-2. Use **Superimpose / Align** on backbone atoms (e.g., Cα).  
-3. Replace the protein coordinates in the full system with the protonated version.  
-4. Keep the original PIP₂, ions, ligand positions exactly unchanged.
-
-This gives you the final **protonated full system PDB**, ready for CHARMM-GUI or tleap.
 
 ---
 
@@ -144,11 +121,8 @@ This gives you the final **protonated full system PDB**, ready for CHARMM-GUI or
 After completing H++:
 
 - You have a protonated protein at pH 7.4  
-- Protonation states of HIS, ASN, GLN are optimized  
 - Missing hydrogens added  
-- Physically reasonable protonation based on pKa predictions  
 - Structure converted to PDB via `ambpdb`  
-- Protonated protein aligned back to the full system with PIP₂ and ions  
 
 You are now ready for:
 
