@@ -108,7 +108,7 @@ Select:
 - all 4 aligned PIP entries,
 - the extracted ion entry.
 
-Right-click → **Merge → Merge Selected Entries**.
+Right-click → **Merge**.
 
 ![ions](g2_figures/step4:system_assembly/merge.png)
 
