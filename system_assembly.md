@@ -225,7 +225,7 @@ This should clean up the PDB for tleap compatibility.
 
 ## 5A. Concatenate Protein/PIP/Ions With Lipids
 
-Now we merge the protein with the memebrane that we extarcted earlier:
+Now we merge the protein with the membrane that we extarcted earlier:
 ```bash
 cat G2_S181P_charm_alinged.pdb membrane.pdb > combined_full_protein_with_lipid.pdb 
 ```
