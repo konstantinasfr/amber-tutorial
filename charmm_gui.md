@@ -7,7 +7,8 @@ We go to https://www.charmm-gui.org/ but first we have to register.
 ![register](g2_figures/step3:charmmgui/register.png)
 
 Go to CHARMM-GUI → Membrane Builder → Bilayer Builder.
-<img src="g2_figures/step3:charmmgui/bilayer_menu.png" width="700">
+
+![register](g2_figures/step3:charmmgui/bilayer_menu.png)\
 
 Upload the protein-only PDB file *pdb4amber_G2_S181P_proteinonly.pdb*. CHARMM-GUI will automatically recognize the chains, detect engineered residues, and assign chain labels such as PROA, PROB, PROC, and PROD.
 
