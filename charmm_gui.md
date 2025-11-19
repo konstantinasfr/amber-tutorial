@@ -3,10 +3,13 @@
 This section explains how to embed the cleaned protein-only PDB into a lipid bilayer using CHARMM-GUI Bilayer Builder. We start from the protein-only structure created earlier, with all waters, ions, and ligands removed.
 
 ## 2A. Upload the Protein
+We go to https://www.charmm-gui.org/ but first we have to register.
+![register](g2_figures/step3:charmmgui/register.png)
 
 Go to CHARMM-GUI → Membrane Builder → Bilayer Builder.
+<img src="g2_figures/step3:charmmgui/bilayer_menu.png" width="700">
 
-Upload the protein-only PDB file (for example, `pdb4amber_G12_protein_only.pdb`). CHARMM-GUI will automatically recognize the chains, detect engineered residues, and assign chain labels such as PROA, PROB, PROC, and PROD.
+Upload the protein-only PDB file *pdb4amber_G2_S181P_proteinonly.pdb*. CHARMM-GUI will automatically recognize the chains, detect engineered residues, and assign chain labels such as PROA, PROB, PROC, and PROD.
 
 ![Uploading the cleaned protein-only structure into CHARMM-GUI](image_placeholder)
 
@@ -37,12 +40,7 @@ PPM (Positioning of Proteins in Membranes) analyzes the hydrophobic thickness an
 
 CHARMM-GUI now displays the PPM-oriented structure. Ensure that the transmembrane helices are centered correctly along the membrane normal.
 
-Next, set the X and Y dimensions of the system box. We use:
-
-| Dimension | Value |
-|-----------|-------|
-| X | 100 Å |
-| Y | 100 Å |
+Next, set the X and Y dimensions of the system box. We set *Length of X and Y:* to 100Å
 
 ![Verifying the protein orientation and defining box dimensions](image_placeholder)
 
