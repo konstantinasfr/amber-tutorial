@@ -184,4 +184,5 @@ At the end of the CHARMM-GUI Bilayer Builder step, you should have:
 + A combined system PDB suitable for further processing
 + Separate protein and membrane PDB files
 
-**Next step:** Protonation and pKa Assignment (H++ Server).
+Now you are ready for: 
+➡️ [**Step 4 — System Assembly in Maestro**](./system_assembly.md)
