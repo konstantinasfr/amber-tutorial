@@ -7,7 +7,7 @@ In this step, we assemble the full protein–PIP–ion structure inside Maestro.
 - the CHARMM-GUI PDB has correct membrane coordinates,
 - and the full PIP molecule comes from `PIP.pdb`.
 
-We must bring all these pieces together into one consistent coordinate frame before sending the structure to tleap.
+We must bring all these pieces together into one pdb before sending the structure to tleap.
 
 ## 4A. Import All Required Structures
 
@@ -46,6 +46,8 @@ Use:
 
 This places the H++-protonated protein exactly where the preprocessed structure was located.
 
+![register](g2_figures/step4:system_assembly/proteinonly_alignemnt.png)
+
 We do this so that when we later add the PIPs and ions, the protonated protein matches their positions perfectly.
 
 ## 4C. Replace the Truncated Headgroups With Full PIP₂ Molecules
@@ -65,6 +67,8 @@ Right-click on each PIP headgroup → **Copy to New Entry**.
 
 This isolates each headgroup so we can use it as an alignment reference.
 
+![PIO](g2_figures/step4:system_assembly/copy_pip.png)
+
 ### Step 2 — Align full PIP to the extracted headgroup
 
 Select one headgroup entry, then select the full PIP entry. (The reference MUST be above.)
@@ -78,6 +82,8 @@ Use:
 - User-specified reference
 - Constrain common substructure (MCS) → This ensures the headgroup atoms overlap perfectly.
 
+![PIO](g2_figures/step4:system_assembly/ligand_alignment.png)
+
 Repeat this for all four PIP molecules.
 
 **Result:** You now have 4 full PIP2 molecules oriented exactly where the truncated headgroups originally were.
@@ -86,13 +92,15 @@ This preserves the biological headgroup placement inside the protein pocket.
 
 ## 4D. Extract the Ions
 
-From `G2_S181P.pdb`, select the ions (K⁺ or Na⁺ depending on your file):
+From `G2_S181P.pdb`, select the ions (K⁺):
 
 Right-click → **Copy to New Entry**.
 
 Place this new ions entry after the four aligned PIPs.
 
 This ensures they are merged in the correct order later.
+
+![ions](g2_figures/step4:system_assembly/ions.png)
 
 ## 4E. Merge the Aligned Protein, PIPs, and Ions
 
@@ -103,6 +111,8 @@ Select:
 - the extracted ion entry.
 
 Right-click → **Merge → Merge Selected Entries**.
+
+![ions](g2_figures/step4:system_assembly/merge.png)
 
 This gives one combined entry:
 
@@ -122,17 +132,13 @@ To do this:
 - Open **Protein Structure Alignment**
 - Use **Residues** for alignment
 
-This step is crucial because:
-
-- CHARMM-GUI defines the Z-axis membrane orientation,
-- tleap will build the bilayer around this orientation,
-- and we want PIPs and ions to stay in the correct spatial positions.
+This step is crucial because CHARMM-GUI defines the Z-axis membrane orientation
 
 ## 4G. Fix PIP Residue Numbers
 
-Tleap requires PIPs to have unique residue numbers.
+Tleap requires PIPs to have unique residue numbers. So we have to change the PIP residue names in the merged and aligned structure.
 
-The last protein residue is 1312, so set:
+We open the pdb file produce from H++ and we see that the last protein residue is 1312, so set:
 
 - PIP A → 1313
 - PIP B → 1314
@@ -143,7 +149,26 @@ Use:
 
 **Build → Other Edits → Change Atom Properties → Residue Number**
 
-Also add **TER** after each PIP.
+![ions](g2_figures/step4:system_assembly/change_pip_names.png)
+
+## 4K. Export the Final Merged Complex
+
+The protein-pip-ion structure is now ready to be placed in the lipid bilayer, so we need to exposrt it.
+
+Click on the merged structure and go to:
+
+**File → Export Structures**
+
+![ions](g2_figures/step4:system_assembly/export.png)
+
+Save as:
+```
+G2_S181P_charm_aligned.pdb
+```
+
+This is now the complete protein + PIP2 + ions structure in the correct membrane orientation.
+
+In the following steps, we make the necessary changes to G2_S181P_charm_aligned.pdb so that it is compatible with tleap.
 
 ## 4H. Convert CYS → CYX for Disulfide Bonds
 
@@ -164,14 +189,22 @@ Change these manually in the merged PDB:
 ```
 CYS → CYX
 ```
+![ions](g2_figures/step4:system_assembly/CYX.png)
 
-## 4I. Add TER Cards at Chain Ends
+## 4I. Add TER at Chain Ends and after each PIP
 
 TER cards must mark the end of each chain to avoid merging chains accidentally.
 
 Search for **OXT**, which marks the end of a chain:
 
 Insert a **TER** line after each OXT or chain end.
+
+![ions](g2_figures/step4:system_assembly/OXT.png)
+
+Then go at the end of each PIP and add **TER** as well.
+
+![ions](g2_figures/step4:system_assembly/PIP_TER.png)
+
 
 ## 4J. Remove CONNECT and ANISOU Lines
 
@@ -184,59 +217,20 @@ Scroll to the bottom and delete:
 
 This should clean up the PDB for tleap compatibility.
 
-## 4K. Export the Final Merged Complex
-
-Go to:
-
-**File → Export Structures**
-
-Set:
-
-- Export all entries to the same file
-- Reorder by residue number
-- Use display names OFF
-- v3000 OFF
-
-Save as:
-```
-G2_S181P_charm_aligned.pdb
-```
-
-This is now the complete protein + PIP2 + ions structure in the correct membrane orientation.
+![ions](g2_figures/step4:system_assembly/connect_anisou.png)
 
 ---
 
 # 5. Combine the Assembled Protein With the CHARMM-GUI Lipid Bilayer
 
-## 5A. Prepare the DOPC_128 Lipid File
+## 5A. Concatenate Protein/PIP/Ions With Lipids
 
-Open `DOPC_128.pdb` in a text editor.
-
-Jump to the CHL lines:
-```
-/CHL <Enter>
+Now we merge the protein with the memebrane that we extarcted earlier:
+```bash
+cat G2_S181P_charm_alinged.pdb membrane.pdb > combined_full_protein_with_lipid.pdb 
 ```
 
-Find the first cholesterol or lipid entry (e.g., line 20979).
-
-Delete everything above that line:
-```
-20977dd
-:wq
-```
-
-This isolates the lipid portion only.
-
-## 5B. Add TER After Each PIP
-
-Each PIP must end with:
-```
-TER
-```
-
-This ensures tleap does not merge them together.
-
-## 5C. Remove Hydrogens Before Running tleap
+## 5B. Remove Hydrogens Before Running tleap
 
 Hydrogens should be regenerated by tleap for correct Amber atom typing.
 
@@ -244,37 +238,17 @@ Use:
 ```bash
 reduce -Trim combined_full_protein_with_lipid.pdb > combined_full_protein_with_lipid_noH.pdb
 ```
-
-## 5D. Concatenate Protein/PIP/Ions With Lipids
-
-Finally merge protein + lipids:
-```bash
-cat G2_S181P_charm_aligned.pdb DOPC_128.pdb > combined_full_protein_with_lipid.pdb
-```
-
 This is the final structure you will give to tleap.
 
 ---
 
 # Summary
 
-At the end of the system-assembly step in Maestro, you should now have:
-
-- A fully protonated protein (from H++)
-- Correct biological positions for the original truncated PIP headgroups (from the preprocessed PDB)
-- Full-length PIP₂ molecules aligned onto those headgroups
-- All K⁺ ions extracted and placed in the correct coordinates
-- All PIPs renumbered (1313–1316) with proper TER cards
-- All cysteines forming disulfides converted from CYS → CYX
-- All ANISOU and CONECT lines removed
-- The complete protein–PIP–ion complex aligned to the CHARMM-GUI membrane frame
-- A merged `combined_full_protein_with_lipid.pdb` containing:
+At the end of the system-assembly step in Maestro, you should now have a merged `combined_full_protein_with_lipid_noH.pdb` containing:
   - the assembled protein
   - four full PIP₂ molecules
   - potassium ions
   - the DOPC lipid bilayer
   - no hydrogens (tleap will add them)
 
-You now have a clean, membrane-aligned, Amber-compatible structure ready for tleap.
-
-**Next step:** AMBER parameterization and tleap system building.
+Now you are ready for: [**Step 5 — Preparing the AMBER System (tleap)**](./tleap.md)
