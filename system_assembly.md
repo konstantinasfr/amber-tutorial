@@ -149,6 +149,8 @@ Use:
 
 ![ions](g2_figures/step4:system_assembly/change_pip_names.png)
 
+We do that for all 4 PIPs.
+
 ## 4K. Export the Final Merged Complex
 
 The protein-pip-ion structure is now ready to be placed in the lipid bilayer, so we need to exposrt it.
