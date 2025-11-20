@@ -1,0 +1,7 @@
+1) delete the protein and keep lipid bilayer
+2) we add TER to G12_charnn_aligned.pdb
+3) CYS->CYX
+4) TER after PIP
+5) Delete everything after last PIP
+6) connect: cat G12_S181P_S170P_charm_aling.pdb membrane.pdb > combined_full_protein_with_lipid.pdb 
+7) reduce -Trim combined_full_protein_with_lipid.pdb > combined_full_protein_with_lipid_noH.pdb 

@@ -1,0 +1,37 @@
+--------------------------------------------------------------------------------
+JobId          : c19fa1b0-c4d1-11f0-a597-a8a159434a6b
+Name           : align_ligands_1
+Program        : align_ligands
+ClientVersion  : 2025-4 build 125
+Host           : ziyue
+Dir            : /media/ziyue/328bfc27-c1a6-4fce-9199-95c389ecd48d/Konstantina/GIRK2/step4_maestro/system_assembly.prj/jobs/align_ligands_1
+HostEntry      : localhost
+JobHost        : ziyue
+JobDir         : /home/ziyue/.schrodinger/tmp/ziyue/jobs/c19fa1b0-c4d1-11f0-a597-a8a159434a6b
+JobSchrodinger : /opt/schrodinger2025-4
+Commandline    : /opt/schrodinger2025-4/utilities/align_ligands ligands_to_align.mae -ref 1 -core MCS -sample thorough -max 1000 -close_contact 0.5 -JOBNAME align_ligands_1 -HOST localhost:1 -DISP append -VIEWNAME alignligands -PROJ /media/ziyue/328bfc27-c1a6-4fce-9199-95c389ecd48d/Konstantina/GIRK2/step4_maestro/system_assembly.prj
+StartTime      : 2025-11-18-17:56:02
+Version        : 2025-4 build 125
+--------------------------------------------------------------------------------
+
+Finding MCS cores for 2 structures
+
+Primary reference = structure 1
+
+Aligning 2-->1 (1 of 1): Core SMARTS = [#8&!R](-&!@[#6]1-&@[#6](-&!@[#8&!R])-&@[#6](-&!@[#8&!R])-&@[#6](-&@[#6](-&@[#6]-&@1-&!@[#8&!R])-&!@[#8&!R]-&!@[#15&!R](-&!@[#8&!R])-&!@[#8&!R])-&!@[#8&!R]-&!@[#15&!R](-&!@[#8&!R])-&!@[#8&!R])-&!@[#15&!R](-&!@[#8&!R])-&!@[#8&!R]-&!@[#6&!R]-&!@[#6&!R](-&!@[#8&!R]-&!@[#6&!R])-&!@[#6&!R]-&!@[#8&!R]-&!@[#6&!R]
+  Shape similarity = 0.291424
+
+Attempting to superimpose identical sidechains
+Successfully re-snapped 2-->1: Sidechain = [#8], anchor atoms = 65, 4
+Successfully re-snapped 2-->1: Sidechain = [#8], anchor atoms = 66, 6
+Successfully re-snapped 2-->1: Sidechain = [#8], anchor atoms = 79, 14
+
+Recalculating shape similarities to reference structure
+Structure 2: Old similarity = 0.291424, new similarity = 0.291424
+
+Writing 2 aligned structures to align_ligands_1_align.maegz
+
+Current time: Tue Nov 18 17:56:55 2025
+Elapsed time: 0:00:52.30
+align_ligands successfully completed.
+

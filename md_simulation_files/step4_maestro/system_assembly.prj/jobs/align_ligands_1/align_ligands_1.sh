@@ -1,0 +1,1 @@
+"${SCHRODINGER}/utilities/align_ligands" ligands_to_align.mae -ref 1 -core MCS -sample thorough -max 1000 -close_contact 0.5 -JOBNAME align_ligands_1 -HOST localhost:1
