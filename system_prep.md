@@ -153,4 +153,4 @@ At the end of this step, you should have:
 - Missing loops rebuilt 
 - Protein-only PDB for H++
 
-Next step: **Protonation and pKa Assignment (H++ Server)**.
+You are now ready for: [**Protonation and pKa Assignment (H++ Server)**](./h++.md)
