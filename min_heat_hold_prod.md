@@ -176,23 +176,102 @@ We run them using:
 pmemd.cuda -O -i 04_HoldX.in ...
 ```
 
+To run all the steps we run the *submit_hold.sh* script the following way:
+
+```bash
+./submit_hold RUN1
+```
+
+
 This section uses GPU acceleration because equilibration requires more timesteps.
 
 ## 6F. Production MD
 
-Production MD is the final, long simulation step.
+Production MD is the main simulation stage where we generate the long trajectories used for all downstream analyses. These simulations are executed using `pmemd.cuda`, which provides maximum performance on NVIDIA GPUs.
 
-We use `pmemd.cuda`, which gives maximum speed on NVIDIA GPUs.
+### Simulation Length
 
-- Each production segment may take up to 10 hours
-- Typical production run = many segments, e.g., 10 ns, 50 ns, or 100 ns
+For this project, production is divided into five segments, and each segment is defined in the input file using:
 
-These trajectories are later used for cpptraj analysis, ion permeation analysis, force calculations, etc.
+- `nstlim = 34000000` → 34 million MD steps
+- `dt = 0.003` ps → 3 fs timestep (HMR enabled)
 
-Production is the longest and most computationally expensive part of the workflow.
+This results in:
+
+```
+34,000,000 steps × 0.003 ps = 102,000 ps ≈ 102 ns per segment
+```
+
+So every block is approximately **100 ns** of simulation time. Running 5 blocks gives a total of **~500 ns**.
+
+Splitting production into five ~100 ns chunks makes the workflow:
+
+- easier to restart if a job crashes
+- compatible with HPC queue limits
+- safer (you never lose the whole run)
+- simpler to continue (each block starts from the previous `.rst`)
+- easier to merge into a single continuous trajectory
+
+### Launching Production MD
+
+We submit the full 5-segment production using:
+
+```bash
+./submit_prod.sh RUN1
+```
+
+This command:
+
+- creates a folder named `RUN1/`
+- automatically starts all 5 production blocks
+- uses the correct restart file for each step
+- writes all `.rst`, `.out`, `.info`, and trajectory files inside `RUN1/`
+
+Each block internally uses a command of the form:
+
+```bash
+pmemd.cuda -O \
+  -i 05_Prod.in \
+  -o 05_Prod1.out \
+  -p com.prmtop \
+  -c 04_Hold10.rst \
+  -r 05_Prod1.rst \
+  -x 05_Prod1.mdcrd
+```
+
+For block 2, tleap uses:
+
+```bash
+-c 05_Prod1.rst
+```
+
+For block 3:
+
+```bash
+-c 05_Prod2.rst
+```
+
+And so on until all five segments are complete.
+
+### Combining the Segments into One Continuous Trajectory
+
+After all 5 blocks finish, we create the final NetCDF trajectory using:
+
+```bash
+./create_nc.sh RUN1
+```
+
+This script:
+
+- reads all five `05_ProdX.mdcrd` or `.nc` files
+- orders them correctly
+- stitches them together
+- outputs a single continuous trajectory in outpur folder named `protein.nc`
+
+This is the file used for all long-timescale analyses.
 
 ---
-
+ usually named `RUN1_production.nc
 # Summary
 
 At the end of this stage, you will have:
