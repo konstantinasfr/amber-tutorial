@@ -271,7 +271,7 @@ This script:
 This is the file used for all long-timescale analyses.
 
 ---
- usually named `RUN1_production.nc
+ usually named `RUN1_production.nc`
 # Summary
 
 At the end of this stage, you will have:
