@@ -1,0 +1,1 @@
+ambpdb -c 0.15_80_10_pH7.4_pdb4amber_G2_S181P_proteinonly_nocon.crd -p 0.15_80_10_pH7.4_pdb4amber_G2_S181P_proteinonly_nocon.top >0.15_80_10_pH7.4_pdb4amber_G2_S181P_proteinonly_nocon.pdb
