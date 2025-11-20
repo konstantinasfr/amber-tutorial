@@ -13,13 +13,13 @@ We first calculate the dimensions of our system using the merged structure witho
 Example output:
 
 ```
-107.92900085449219, 108.136001586914064, 161.02200317382813
+108.46999740600586, 108.581001281738284, 160.60500335693359
 ```
 
 These values define the size of the simulation box and will be inserted into the `tleap.in` file:
 
 ```
-set mol box {107.92900085449219 108.136001586914064 161.02200317382813}
+set mol box {108.46999740600586, 108.581001281738284, 160.60500335693359
 ```
 
 ## 5B. tleap Input File
@@ -37,22 +37,15 @@ loadamberparams PIP.frcmod
 
 abc = loadpdb combined_full_protein_with_lipid_noH.pdb
 savepdb abc first_with_hydrogens.pdb
-
 mol = loadpdb first_with_hydrogens.pdb
-
-# Disulfide bonds
-bond mol.80.SG   mol.112.SG
-bond mol.408.SG  mol.440.SG
-bond mol.736.SG  mol.768.SG
+bond mol.80.SG mol.112.SG
+bond mol.408.SG mol.440.SG
+bond mol.736.SG mol.768.SG
 bond mol.1064.SG mol.1096.SG
 
-# Neutralize
 addions mol K+ 0
 addions mol Cl- 0
-
-# Box dimensions
-set mol box {107.92900085449219 108.136001586914064 161.02200317382813}
-
+set mol box {108.46999740600586, 108.581001281738284, 160.60500335693359}
 saveamberparm mol com.prmtop com.inpcrd
 quit
 ```
@@ -130,6 +123,8 @@ Key indicators of success:
 - Disulfide bonds were processed
 - PIP improper torsions were recognized
 
+![connect at the end of the pdb](g2_figures/step5:tleap/tleap_success.png) <br>
+
 ## 5H. Generate a Clean AMBER PDB
 
 To produce a readable PDB from the AMBER topology, use:
@@ -140,10 +135,10 @@ ambpdb -p com.prmtop -c com.inpcrd > com_from_amber.pdb
 
 This file helps you identify:
 
-- residue ranges for the protein
-- residue numbers for PIPs
+- residue ranges for the protein and PIPs
 - lipid ranges
-- coordinates to use in the minimization, heating, and equilibration scripts
+
+We will use these ranges in minimization and heating scripts
 
 ---
 
@@ -155,10 +150,5 @@ At the end of the tleap preparation step, you should have:
 - `com.prmtop` (topology)
 - `com.inpcrd` (coordinates)
 - A clean Amber-generated PDB (`com_from_amber.pdb`)
-- All disulfide bonds correctly defined
-- Proper PIP₂ atom typing and parameters
-- Neutralized ions added
-- A correctly sized simulation box
-- A tleap log with **Errors = 0**
 
-You are now ready to proceed with minimization, heating, equilibration, and production MD simulations.
+You are now ready for: [**Step 6 —  Energy Minimization, Heating, Equilibration, and Production MD**](./min_heat_hold_prod.md)
