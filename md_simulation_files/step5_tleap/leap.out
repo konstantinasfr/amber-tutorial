@@ -1,0 +1,2467 @@
+-I: Adding /home/ziyue/miniforge3/envs/Amber/dat/leap/prep to search path.
+-I: Adding /home/ziyue/miniforge3/envs/Amber/dat/leap/lib to search path.
+-I: Adding /home/ziyue/miniforge3/envs/Amber/dat/leap/parm to search path.
+-I: Adding /home/ziyue/miniforge3/envs/Amber/dat/leap/cmd to search path.
+-s: Ignoring all leaprc startup files.
+-f: Source tleap.in.
+
+Welcome to LEaP!
+Sourcing: ./tleap.in
+----- Source: /home/ziyue/miniforge3/envs/Amber/dat/leap/cmd/leaprc.protein.ff19SB
+----- Source of /home/ziyue/miniforge3/envs/Amber/dat/leap/cmd/leaprc.protein.ff19SB done
+Log file: ./leap.log
+Loading parameters: /home/ziyue/miniforge3/envs/Amber/dat/leap/parm/parm19.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA + ff19SB
+Loading parameters: /home/ziyue/miniforge3/envs/Amber/dat/leap/parm/frcmod.ff19SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff19SB AA-specific backbone CMAPs for protein 07/25/2019
+Loading library: /home/ziyue/miniforge3/envs/Amber/dat/leap/lib/amino19.lib
+Loading library: /home/ziyue/miniforge3/envs/Amber/dat/leap/lib/aminoct12.lib
+Loading library: /home/ziyue/miniforge3/envs/Amber/dat/leap/lib/aminont12.lib
+----- Source: /home/ziyue/miniforge3/envs/Amber/dat/leap/cmd/leaprc.gaff2
+----- Source of /home/ziyue/miniforge3/envs/Amber/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /home/ziyue/miniforge3/envs/Amber/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+----- Source: /home/ziyue/miniforge3/envs/Amber/dat/leap/cmd/leaprc.lipid21
+----- Source of /home/ziyue/miniforge3/envs/Amber/dat/leap/cmd/leaprc.lipid21 done
+Log file: ./leap.log
+Loading parameters: /home/ziyue/miniforge3/envs/Amber/dat/leap/parm/lipid21.dat
+Reading title:
+AMBER Lipid21 v1.0 C. J. Dickson, R.C. Walker, I.R. Gould.
+Loading library: /home/ziyue/miniforge3/envs/Amber/dat/leap/lib/lipid21.lib
+----- Source: /home/ziyue/miniforge3/envs/Amber/dat/leap/cmd/leaprc.water.tip3p
+----- Source of /home/ziyue/miniforge3/envs/Amber/dat/leap/cmd/leaprc.water.tip3p done
+Loading library: /home/ziyue/miniforge3/envs/Amber/dat/leap/lib/atomic_ions.lib
+Loading library: /home/ziyue/miniforge3/envs/Amber/dat/leap/lib/solvents.lib
+Loading parameters: /home/ziyue/miniforge3/envs/Amber/dat/leap/parm/frcmod.tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for TIP3P water
+Loading parameters: /home/ziyue/miniforge3/envs/Amber/dat/leap/parm/frcmod.ions1lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of monovalent ions for TIP3P water model (12-6 normal usage set)
+Loading parameters: /home/ziyue/miniforge3/envs/Amber/dat/leap/parm/frcmod.ionsjc_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP3P water from Joung & Cheatham JPCB (2008)
+Loading parameters: /home/ziyue/miniforge3/envs/Amber/dat/leap/parm/frcmod.ions234lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for TIP3P water model (12-6 normal usage set)
+Loading parameters: /home/ziyue/miniforge3/envs/Amber/dat/leap/parm/frcmod.ionsjc_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP3P water from Joung & Cheatham JPCB (2008)
+Loading Prep file: ./PIP.prepi
+Loading parameters: ./PIP.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Loading PDB file: ./combined_full_protein_with_lipid_noH.pdb
+ (starting new molecule for chain  )
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 5 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 5 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 6 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 6 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 7 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 7 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 8 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 8 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 9 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 9 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 10 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 10 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 11 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 11 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 12 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 12 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 13 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 13 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 14 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 14 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 15 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 15 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 16 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 16 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 17 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 17 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 18 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 18 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 19 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 19 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 20 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 20 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 21 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 21 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 22 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 22 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 23 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 23 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 24 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 24 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 25 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 25 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 26 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 26 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 27 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 27 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 28 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 28 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 29 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 29 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 30 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 30 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 31 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 31 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 32 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 32 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 33 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 33 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 34 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 34 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 35 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 35 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 36 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 36 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 37 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 37 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 38 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 38 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 39 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 39 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 40 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 40 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 41 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 41 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 42 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 42 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 43 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 43 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 44 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 44 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 45 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 45 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 46 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 46 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 47 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 47 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 48 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 48 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 49 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 49 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 50 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 50 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 51 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 51 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 52 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 52 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 53 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 53 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 54 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 54 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 55 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 55 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 56 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 56 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 57 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 57 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 58 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 58 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 59 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 59 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 60 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 60 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 61 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 61 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 62 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 62 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 63 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 63 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 64 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 64 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 65 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 65 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 66 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 66 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 67 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 67 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 68 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 68 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 69 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 69 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 70 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 70 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 71 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 71 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 72 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 72 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 73 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 73 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 74 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 74 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 75 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 75 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 76 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 76 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 77 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 77 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 78 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 78 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 79 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 79 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 80 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 80 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 81 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 81 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 82 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 82 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 83 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 83 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 84 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 84 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 85 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 85 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 86 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 86 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 87 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 87 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 88 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 88 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 89 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 89 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 90 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 90 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 91 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 91 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 92 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 92 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 93 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 93 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 94 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 94 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 95 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 95 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 96 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 96 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 97 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 97 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 98 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 98 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 99 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 99 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 100 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 100 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 101 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 101 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 102 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 102 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 103 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 103 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 104 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 104 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 105 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 105 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 106 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 106 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 107 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 107 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 108 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 108 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 109 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 109 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 110 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 110 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 111 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 111 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 112 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 112 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 113 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 113 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 114 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 114 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 115 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 115 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 116 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 116 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 117 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 117 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 118 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 118 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 119 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 119 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 120 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 120 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 121 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 121 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 122 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 122 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 123 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 123 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 124 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 124 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 125 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 125 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 126 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 126 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 127 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 127 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 128 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 128 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 129 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 129 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 130 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 130 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 131 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 131 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 132 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 132 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 133 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 133 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 134 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 134 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 135 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 135 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 136 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 136 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 137 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 137 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 138 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 138 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 139 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 139 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 140 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 140 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 141 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 141 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 142 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 142 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 143 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 143 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 144 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 144 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 149 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 149 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 150 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 150 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 151 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 151 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 152 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 152 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 153 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 153 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 154 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 154 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 155 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 155 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 156 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 156 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 157 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 157 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 158 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 158 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 159 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 159 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 160 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 160 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 161 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 161 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 162 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 162 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 163 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 163 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 164 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 164 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 165 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 165 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 166 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 166 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 167 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 167 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 168 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 168 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 169 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 169 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 170 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 170 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 171 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 171 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 172 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 172 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 173 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 173 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 174 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 174 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 175 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 175 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 176 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 176 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 177 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 177 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 178 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 178 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 179 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 179 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 180 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 180 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 181 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 181 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 182 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 182 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 183 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 183 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 184 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 184 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 185 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 185 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 186 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 186 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 187 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 187 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 188 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 188 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 189 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 189 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 190 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 190 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 191 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 191 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 192 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 192 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 193 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 193 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 194 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 194 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 195 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 195 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 196 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 196 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 197 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 197 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 198 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 198 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 199 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 199 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 200 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 200 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 201 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 201 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 202 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 202 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 203 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 203 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 204 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 204 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 205 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 205 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 206 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 206 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 207 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 207 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 208 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 208 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 209 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 209 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 210 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 210 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 211 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 211 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 212 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 212 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 213 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 213 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 214 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 214 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 215 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 215 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 216 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 216 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 217 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 217 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 218 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 218 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 219 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 219 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 220 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 220 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 221 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 221 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 222 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 222 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 223 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 223 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 224 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 224 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 225 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 225 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 226 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 226 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 227 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 227 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 228 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 228 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 229 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 229 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 230 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 230 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 231 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 231 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 232 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 232 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 233 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 233 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 234 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 234 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 235 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 235 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 236 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 236 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 237 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 237 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 238 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 238 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 239 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 239 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 240 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 240 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 241 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 241 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 242 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 242 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 243 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 243 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 244 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 244 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 245 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 245 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 246 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 246 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 247 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 247 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 248 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 248 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 249 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 249 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 250 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 250 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 251 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 251 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 252 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 252 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 253 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 253 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 254 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 254 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 255 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 255 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 256 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 256 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 257 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 257 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 258 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 258 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 259 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 259 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 260 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 260 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 261 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 261 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 262 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 262 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 263 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 263 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 264 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 264 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 265 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 265 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 266 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 266 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 267 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 267 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 268 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 268 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 269 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 269 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 270 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 270 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 271 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 271 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 272 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 272 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 273 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 273 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 274 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 274 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 275 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 275 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 276 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 276 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 277 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 277 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 278 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 278 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 279 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 279 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 280 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 280 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 281 ;
+this residue is split into PA and PE.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 281 ;
+this residue is split into PE and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 282 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 282 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 283 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 283 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 284 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 284 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 285 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 285 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 286 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 286 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 287 ;
+this residue is split into PA and PC.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 287 ;
+this residue is split into PC and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 288 ;
+this residue is split into PA and PS.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+Name change in pdb file residue 288 ;
+this residue is split into PS and OL.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Note.
+560 residues had naming warnings.
+Thus, there are split residues;
+residue sequence numbers will not correspond to those in the pdb.
+  Added missing heavy atom: .R<CHL 1321>.A<C3 7>
+  total atoms in file: 64342
+  Leap added 110727 missing atoms according to residue templates:
+       1 Heavy
+       110726 H / lone pairs
+Writing pdb file: first_with_hydrogens.pdb
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+ Converting N-terminal residue name to PDB format: NILE -> ILE
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+ Converting C-terminal residue name to PDB format: CASN -> ASN
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+ Converting N-terminal residue name to PDB format: NILE -> ILE
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+ Converting C-terminal residue name to PDB format: CASN -> ASN
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+ Converting N-terminal residue name to PDB format: NILE -> ILE
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+ Converting C-terminal residue name to PDB format: CASN -> ASN
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+ Converting N-terminal residue name to PDB format: NILE -> ILE
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+ Converting C-terminal residue name to PDB format: CASN -> ASN
+Loading PDB file: ./first_with_hydrogens.pdb
+  total atoms in file: 175069
+16 K+ ions required to neutralize.
+Adding 16 counter ions to "mol" using 1A grid
+Grid extends from solute vdw + 4.38  to  10.90
+Resolution:      1.00 Angstrom.
+Solvent present: replacing closest with ion
+	 when steric overlaps occur
+Calculating grid charges
+(Replacing solvent molecule)
+Placed K+ in mol at (0.10, -0.15, -43.84).
+(Replacing solvent molecule)
+Placed K+ in mol at (-2.17, 42.24, -24.64).
+(Replacing solvent molecule)
+Placed K+ in mol at (14.94, -38.05, -30.07).
+(Replacing solvent molecule)
+Placed K+ in mol at (36.02, 15.39, -24.93).
+(Replacing solvent molecule)
+Placed K+ in mol at (-16.65, 37.56, -31.40).
+(Replacing solvent molecule)
+Placed K+ in mol at (-22.17, -10.82, -78.53).
+(Replacing solvent molecule)
+Placed K+ in mol at (-36.26, -16.93, -33.49).
+(Replacing solvent molecule)
+Placed K+ in mol at (7.03, 31.69, -23.97).
+(Replacing solvent molecule)
+Placed K+ in mol at (-38.60, -28.73, 25.18).
+(Replacing solvent molecule)
+Placed K+ in mol at (-24.09, 48.33, 25.57).
+(Replacing solvent molecule)
+Placed K+ in mol at (21.28, 7.38, -77.79).
+(Replacing solvent molecule)
+Placed K+ in mol at (50.17, 21.99, 61.23).
+(Replacing solvent molecule)
+Placed K+ in mol at (-24.94, -35.01, -45.48).
+(Replacing solvent molecule)
+Placed K+ in mol at (27.51, -19.89, 26.98).
+(No solvent overlap)
+Placed K+ in mol at (-8.62, 15.97, -82.56).
+(Replacing solvent molecule)
+Placed K+ in mol at (30.03, -41.57, -24.99).
+
+Done adding ions.
+ 0.000000 0 1 0
+0 Cl- ion required to neutralize.
+Adding 0 counter ions to "mol" using 1A grid
+Checking Unit.
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+There is a bond of 3.121 angstroms between C113 and C112 atoms:
+-------  .R<PA 1595>.A<C113 11> and .R<PA 1595>.A<C112 14>
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Warning!
+There is a bond of 3.403 angstroms between C16 and C15 atoms:
+-------  .R<PA 2043>.A<C16 32> and .R<PA 2043>.A<C15 35>
+
+/home/ziyue/miniforge3/envs/Amber/bin/teLeap: Note.
+Ignoring the warnings from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+old PREP-specified impropers:
+ <PIP 1313>:  C32  OS2  C31  OS1 
+ <PIP 1313>:  C22  OI2  C21  OI1 
+ <PIP 1313>:  C26  C24  C25  H51 
+ <PIP 1313>:  C25  C27  C26  H61 
+ <PIP 1313>:  C29  C27  C28  H81 
+ <PIP 1313>:  C28  C210 C29  H91 
+ <PIP 1313>:  C212 C210 C211 H111
+ <PIP 1313>:  C211 C213 C212 H121
+ <PIP 1313>:  C215 C213 C214 H141
+ <PIP 1313>:  C214 C216 C215 H151
+ <PIP 1314>:  C32  OS2  C31  OS1 
+ <PIP 1314>:  C22  OI2  C21  OI1 
+ <PIP 1314>:  C26  C24  C25  H51 
+ <PIP 1314>:  C25  C27  C26  H61 
+ <PIP 1314>:  C29  C27  C28  H81 
+ <PIP 1314>:  C28  C210 C29  H91 
+ <PIP 1314>:  C212 C210 C211 H111
+ <PIP 1314>:  C211 C213 C212 H121
+ <PIP 1314>:  C215 C213 C214 H141
+ <PIP 1314>:  C214 C216 C215 H151
+ <PIP 1315>:  C32  OS2  C31  OS1 
+ <PIP 1315>:  C22  OI2  C21  OI1 
+ <PIP 1315>:  C26  C24  C25  H51 
+ <PIP 1315>:  C25  C27  C26  H61 
+ <PIP 1315>:  C29  C27  C28  H81 
+ <PIP 1315>:  C28  C210 C29  H91 
+ <PIP 1315>:  C212 C210 C211 H111
+ <PIP 1315>:  C211 C213 C212 H121
+ <PIP 1315>:  C215 C213 C214 H141
+ <PIP 1315>:  C214 C216 C215 H151
+ <PIP 1316>:  C32  OS2  C31  OS1 
+ <PIP 1316>:  C22  OI2  C21  OI1 
+ <PIP 1316>:  C26  C24  C25  H51 
+ <PIP 1316>:  C25  C27  C26  H61 
+ <PIP 1316>:  C29  C27  C28  H81 
+ <PIP 1316>:  C28  C210 C29  H91 
+ <PIP 1316>:  C212 C210 C211 H111
+ <PIP 1316>:  C211 C213 C212 H121
+ <PIP 1316>:  C215 C213 C214 H141
+ <PIP 1316>:  C214 C216 C215 H151
+ total 5552 improper torsions applied
+ 40 improper torsions in old prep form
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	CASN	4
+	CHL	8
+	NILE	4
+	WAT	38510
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 570; Notes = 2.

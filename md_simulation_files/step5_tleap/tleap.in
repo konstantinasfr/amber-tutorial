@@ -1,0 +1,21 @@
+source leaprc.protein.ff19SB
+source leaprc.gaff2
+source leaprc.lipid21
+source leaprc.water.tip3p
+loadamberparams frcmod.ionsjc_tip3p
+loadamberprep PIP.prepi
+loadamberparams PIP.frcmod
+
+abc = loadpdb combined_full_protein_with_lipid_noH.pdb
+savepdb abc first_with_hydrogens.pdb
+mol = loadpdb first_with_hydrogens.pdb
+bond mol.80.SG mol.112.SG
+bond mol.408.SG mol.440.SG
+bond mol.736.SG mol.768.SG
+bond mol.1064.SG mol.1096.SG
+
+addions mol K+ 0
+addions mol Cl- 0
+set mol box {108.46999740600586, 108.581001281738284, 160.60500335693359}
+saveamberparm mol com.prmtop com.inpcrd
+quit
