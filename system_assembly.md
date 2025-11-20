@@ -251,4 +251,4 @@ At the end of the system-assembly step in Maestro, you should now have a merged 
   - the DOPC lipid bilayer
   - no hydrogens (tleap will add them)
 
-Now you are ready for: [**Step 5 — Preparing the AMBER System (tleap)**](./tleap.md)
+Now you are ready for: [**Step 5 — Preparing the AMBER System (tleap)**](./tleap_amber.md)
