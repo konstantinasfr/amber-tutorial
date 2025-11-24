@@ -132,9 +132,6 @@ To rebuild loops:
 
 Maestro will rebuild all missing segments.
 
-![Protein after adding missing loops](g2_figures/step1:system_preparation/fasta.png)<br>
-*Protein after adding missing loops, ribbons appear connected*
-
 This step does not apply to our example because we do not have missing loops, but you will see it in G12.
 
 ![Protein after adding missing loops](g2_figures/step1:system_preparation/no_missing_loops.png)<br>
