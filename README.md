@@ -24,7 +24,7 @@ Cleaning the Cryo-EM structure, fixing missing atoms, removing unwanted ligands,
 
 ### Step 2 — Protonation and pKa Assignment (H++ Server)
 
-Submitting the cleaned structure to H++ to assign protonation states and generate titration-corrected hydrogens.
+Submitting the cleaned structure to H++ to assign protonation states.
 
 ### Step 3 — Membrane System Construction (CHARMM-GUI)
 
