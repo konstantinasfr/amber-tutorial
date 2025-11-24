@@ -10,7 +10,7 @@ Begin by downloading the Cryo-EM structure (PDB file) of GRIK2 channel at https:
 
 Load the downloaded PDB into Maestro.
 
-![Cryo-EM structure in Maestro](g2_figures/step1:system_preparation/4kfm_first_import.png)
+![Cryo-EM structure in Maestro](g2_figures/step1:system_preparation/4kfm_first_import.png) <br>
 *Cryo-EM structure in Maestro*
 
 You can see that there are 4 chains called XXXX. We can rename them to A, B, C, and D. It is important to rename them correctly so that we can keep track of the chains later.
