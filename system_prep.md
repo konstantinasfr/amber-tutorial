@@ -147,7 +147,7 @@ You need two PDB files:
 Required for H++, because it cannot process lipids or ligands.
 
 ![Protein after we deleted all lipids and ions](g2_figures/step1:system_preparation/protein_only.png)<br>
-*Protein after we deleted all lipids and ions*
+*We havet to delete all lipids and ions*
 
 #### **2. Full system PDB (protein + full PIP₂ + future ligands)**
 Required later for membrane setup and tleap.
