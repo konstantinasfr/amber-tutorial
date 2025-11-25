@@ -63,6 +63,8 @@ bond mol.1064.SG mol.1096.SG
 
 This ensures that tleap builds the correct S–S linkages in the final topology.
 
+A detailed explanation of all remaining tleap.in commands are provided in this section. [**tleap.in**](./tleap_file.md)
+
 ## 5D. Run tleap
 
 Run tleap using:
