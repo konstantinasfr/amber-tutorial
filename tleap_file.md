@@ -227,6 +227,5 @@ Ends the tleap session.
 | `solvatebox` | Add water |
 | `saveamberparm` | Output AMBER simulation files |
 
-⬅️ [Back to Homepage](./README.md)
+⬅️ [Back to Preparing the AMBER System (tleap)](./tleap_amber.md)
 
-➡️ [Continue to Example: GIRK2 Channel (3SYC)](./girk2_3syc_example.md)
