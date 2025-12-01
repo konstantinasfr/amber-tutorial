@@ -188,7 +188,7 @@ This section uses GPU acceleration because equilibration requires more timesteps
 > **Important:** 
 > - Run these steps on the lab computer at `ziyue@10.75.11.111`
 > - Run the following production steps on computer `yongcheng@10.75.9.85`
-> - Alternatively, you can run all steps on the Explorer cluster: https://rc-docs.northeastern.edu/en/explorer-main/connectingtocluster/index.html
+> - Alternatively, you can run all steps on the Explorer cluster: https://rc-docs.northeastern.edu/en/explorer-main/connectingtocluster/index.htm. You can find the commands to run everything in explorer here" [**Explorer commands**](./explorer.md)
 
 
 ## 6F. Production MD
