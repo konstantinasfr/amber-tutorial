@@ -73,8 +73,15 @@ squeue -u $USER
 ├── input/
 │   ├── com.inpcrd
 │   └── com.prmtop
-└── RUN1/
-    └── (output files will appear here)
+|   └── min.in
+|   └── min2.in
+|   └── 02_Heat.in
+|   └── 03_Heat2.in
+|   └── 03_Heat3.in
+|   └── 04_Hold.in
+|   └── 05_Prod.in
+└── output/
+    └── RUN1
 ```
 
 ---
