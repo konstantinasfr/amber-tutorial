@@ -185,6 +185,12 @@ To run all the steps we run the *submit_hold.sh* script the following way:
 
 This section uses GPU acceleration because equilibration requires more timesteps.
 
+> **Important:** 
+> - Run these steps on the lab computer at `ziyue@10.75.11.111`
+> - Run the following production steps on computer `yongcheng@10.75.9.85`
+> - Alternatively, you can run all steps on the Explorer cluster: https://rc-docs.northeastern.edu/en/explorer-main/connectingtocluster/index.html
+
+
 ## 6F. Production MD
 
 Production MD is the main simulation stage where we generate the long trajectories used for all downstream analyses. These simulations are executed using `pmemd.cuda`, which provides maximum performance on NVIDIA GPUs.
