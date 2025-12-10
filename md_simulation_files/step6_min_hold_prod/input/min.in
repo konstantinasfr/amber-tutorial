@@ -1,0 +1,13 @@
+Minimization with Cartesian restraints for the solute
+ &cntrl
+ imin=1, maxcyc=100,
+ ntpr=5,
+ ntmin=2,
+ ntr=1,
+ &end
+/
+500.0
+RES 1 1304
+END
+END
+

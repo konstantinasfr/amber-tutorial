@@ -1,0 +1,7 @@
+Minimization with Cartesian restraints for the solute 
+ &cntrl 
+ imin=1, maxcyc=2000,ncyc=3000, 
+ ntpr=50, 
+ ntmin=2,
+ &end 
+/
