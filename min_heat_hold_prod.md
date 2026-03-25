@@ -208,7 +208,9 @@ This results in:
 34,000,000 steps × 0.003 ps = 102,000 ps ≈ 102 ns per segment
 ```
 
-So every block is approximately **100 ns** of simulation time. Running 5 blocks gives a total of **~500 ns**.
+Each simulation step advances the system by a small time increment given by dt, which here is 0.003 ps (3 femtoseconds). The total number of steps in one production run is set by nstlim, which is 34,000,000, so one run corresponds to 102 ns of simulation time. The parameter ntwx controls how often coordinates are saved, and since ntwx is 25,000, one frame is written every 25,000 steps. This means each saved frame represents 75 ps, or 0.075 ns.
+
+From these values, each production run produces about 1360 frames (34,000,000 / 25,000). Since there are 5 production runs, the full trajectory contains 6800 frames in total. This corresponds to a total simulation time of about 510 ns (6800 × 0.075 ns). Therefore, in this dataset, one frame equals 0.075 ns, one production run equals 102 ns, and the full trajectory spans approximately 510 ns.
 
 Splitting production into five ~100 ns chunks makes the workflow:
 
