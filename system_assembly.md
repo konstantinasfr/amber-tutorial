@@ -240,6 +240,8 @@ reduce -Trim combined_full_protein_with_lipid.pdb > combined_full_protein_with_l
 ```
 This is the final structure you will give to tleap.
 
+***Remove the END after the first K ions and before the membrane starts.
+
 ---
 
 # Summary
