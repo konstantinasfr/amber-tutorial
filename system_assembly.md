@@ -227,6 +227,8 @@ Scroll to the bottom and delete:
 
 This should clean up the PDB for tleap compatibility.
 
+Remove END as well.
+
 ![ions](g2_figures/step4:system_assembly/connect_anisou.png)
 
 ---
