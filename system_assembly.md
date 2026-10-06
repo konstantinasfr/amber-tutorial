@@ -185,6 +185,16 @@ Open your reference file (`pdb4amber_G2_S181P_proteinonly.pdb`) and identify all
 - 1064
 - 1096
 
+For G12 the numbers are:
+- 80
+- 112
+- 404
+- 436
+- 729
+- 761
+- 1055
+- 1087
+- 
 Change these manually in the merged PDB:
 ```
 CYS → CYX
