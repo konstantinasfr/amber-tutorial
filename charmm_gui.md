@@ -158,6 +158,8 @@ charmmlipid2amber.py -i step5_assembly.pdb -c /home/ziyue/miniforge3/envs/Amber/
 Next we need to extract the protein and membrane into separate PDB files. We need this step because we didn't use the final protein for the membrane construction so later we will need to concatenate the correct combination of memebrane and protein.
 We open the DOPC_128.pdb file and we search for CHL. We store the last numbers of the PIP and the forst number of the lipid bilayer as we will use them in the following commands. In out case these numbers are 21152 and 21153.
 
+For G12 these numbers are 20978 and 20979.
+
 ![Downloading the final AMBER-ready input files](g2_figures/step3:charmmgui/chl.png)
 
 **To extract the protein:**
