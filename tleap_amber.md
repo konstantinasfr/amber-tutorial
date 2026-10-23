@@ -144,6 +144,20 @@ We will use these ranges in minimization and heating scripts
 
 ---
 
+## 5I. Hydrogen Mass Repartitioning (HMR)
+
+Production runs with a 3 fs timestep (dt=0.003 in 05_Prod.in). A timestep that long is only stable if the hydrogens are made heavier. Hydrogen mass repartitioning moves mass from each heavy atom onto the hydrogens bonded to it: the hydrogens become ~3.024 Da, and the heavy atom loses the same amount. The total mass of the system is unchanged, so the thermodynamics are unaffected, but the fastest bond vibrations slow down enough to allow 3–4 fs steps. Water hydrogens are left unchanged, because water is kept rigid.
+
+```bash
+parmed com.prmtop << EOF
+HMassRepartition
+outparm com_4fs.prmtop
+quit
+EOF
+```
+
+---
+
 # Summary
 
 At the end of the tleap preparation step, you should have:
