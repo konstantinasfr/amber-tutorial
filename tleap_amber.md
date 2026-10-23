@@ -151,7 +151,7 @@ Production runs with a 3 fs timestep (dt=0.003 in 05_Prod.in). A timestep that l
 ```bash
 parmed com.prmtop << EOF
 HMassRepartition
-outparm com_4fs.prmtop
+outparm com_hmr.prmtop
 quit
 EOF
 ```
